@@ -1,0 +1,187 @@
+
+import { useState } from 'react'
+import { Search, Filter, MapPin, MessageCircle } from 'lucide-react'
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { Badge } from '@/components/ui/badge'
+
+const Colleagues = () => {
+  const [searchQuery, setSearchQuery] = useState('')
+  const [teamFilter, setTeamFilter] = useState('all')
+  const [statusFilter, setStatusFilter] = useState('all')
+
+  const colleagues = [
+    {
+      id: 1,
+      name: 'Sarah Johnson',
+      team: 'UX Design',
+      status: 'In Office',
+      location: '2nd Floor – UX Wing',
+      avatar: '/placeholder.svg',
+      initials: 'SJ'
+    },
+    {
+      id: 2,
+      name: 'Mike Chen',
+      team: 'Engineering',
+      status: 'Remote',
+      location: null,
+      avatar: '/placeholder.svg',
+      initials: 'MC'
+    },
+    {
+      id: 3,
+      name: 'Emma Davis',
+      team: 'Marketing',
+      status: 'In Office',
+      location: '3rd Floor – Marketing',
+      avatar: '/placeholder.svg',
+      initials: 'ED'
+    },
+    {
+      id: 4,
+      name: 'James Wilson',
+      team: 'Engineering',
+      status: 'In Office',
+      location: '2nd Floor – Dev Zone',
+      avatar: '/placeholder.svg',
+      initials: 'JW'
+    },
+    {
+      id: 5,
+      name: 'Lisa Anderson',
+      team: 'Sales',
+      status: 'Out Today',
+      location: null,
+      avatar: '/placeholder.svg',
+      initials: 'LA'
+    }
+  ]
+
+  const teams = ['UX Design', 'Engineering', 'Marketing', 'Sales']
+
+  const filteredColleagues = colleagues.filter(colleague => {
+    const matchesSearch = colleague.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         colleague.team.toLowerCase().includes(searchQuery.toLowerCase())
+    const matchesTeam = teamFilter === 'all' || colleague.team === teamFilter
+    const matchesStatus = statusFilter === 'all' || colleague.status === statusFilter
+    
+    return matchesSearch && matchesTeam && matchesStatus
+  })
+
+  return (
+    <div className="p-4 pb-20 max-w-md mx-auto space-y-4">
+      {/* Header */}
+      <div className="text-center py-4">
+        <h1 className="text-2xl font-bold text-gray-900">Find Colleagues</h1>
+        <p className="text-gray-500">Search for team members</p>
+      </div>
+
+      {/* Search */}
+      <div className="relative">
+        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+        <Input
+          placeholder="Search by name, team, or project..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          className="pl-10"
+        />
+      </div>
+
+      {/* Filters */}
+      <div className="flex gap-2">
+        <Select value={teamFilter} onValueChange={setTeamFilter}>
+          <SelectTrigger className="flex-1">
+            <SelectValue placeholder="Team" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">All Teams</SelectItem>
+            {teams.map(team => (
+              <SelectItem key={team} value={team}>{team}</SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+
+        <Select value={statusFilter} onValueChange={setStatusFilter}>
+          <SelectTrigger className="flex-1">
+            <SelectValue placeholder="Status" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">All Status</SelectItem>
+            <SelectItem value="In Office">In Office</SelectItem>
+            <SelectItem value="Remote">Remote</SelectItem>
+            <SelectItem value="Out Today">Out Today</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
+
+      {/* Results */}
+      <div className="space-y-3">
+        {filteredColleagues.map(colleague => (
+          <Card key={colleague.id}>
+            <CardContent className="p-4">
+              <div className="flex items-center space-x-4">
+                <Avatar>
+                  <AvatarImage src={colleague.avatar} />
+                  <AvatarFallback>{colleague.initials}</AvatarFallback>
+                </Avatar>
+                
+                <div className="flex-1 min-w-0">
+                  <p className="font-medium text-gray-900">{colleague.name}</p>
+                  <p className="text-sm text-gray-500">{colleague.team}</p>
+                  
+                  <div className="flex items-center gap-2 mt-1">
+                    <Badge 
+                      variant={
+                        colleague.status === 'In Office' ? 'default' :
+                        colleague.status === 'Remote' ? 'secondary' : 'outline'
+                      }
+                      className={`text-xs ${
+                        colleague.status === 'In Office' ? 'bg-green-100 text-green-800' :
+                        colleague.status === 'Remote' ? 'bg-blue-100 text-blue-800' :
+                        'bg-gray-100 text-gray-800'
+                      }`}
+                    >
+                      {colleague.status}
+                    </Badge>
+                    
+                    {colleague.location && (
+                      <p className="text-xs text-gray-500 flex items-center gap-1">
+                        <MapPin size={12} />
+                        {colleague.location}
+                      </p>
+                    )}
+                  </div>
+                </div>
+                
+                <div className="flex flex-col gap-2">
+                  {colleague.status === 'In Office' && (
+                    <Button size="sm" variant="outline" className="text-xs">
+                      <MapPin size={14} className="mr-1" />
+                      Map
+                    </Button>
+                  )}
+                  <Button size="sm" variant="outline" className="text-xs">
+                    <MessageCircle size={14} className="mr-1" />
+                    Message
+                  </Button>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+
+      {filteredColleagues.length === 0 && (
+        <div className="text-center py-8">
+          <p className="text-gray-500">No colleagues found matching your search.</p>
+        </div>
+      )}
+    </div>
+  )
+}
+
+export default Colleagues
