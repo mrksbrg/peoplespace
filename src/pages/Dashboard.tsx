@@ -1,4 +1,3 @@
-
 import { useState } from 'react'
 import { MapPin, Calendar, Users, Map } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -22,7 +21,7 @@ const Dashboard = () => {
     '2nd Floor – UX Wing',
     '2nd Floor – Dev Zone',
     '3rd Floor – Sales',
-    '3rd Floor – Marketing'
+    '3rd Floor – Quality Assurance'
   ]
 
   return (

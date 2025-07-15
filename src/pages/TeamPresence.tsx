@@ -11,7 +11,7 @@ const TeamPresence = () => {
   const [selectedTeam, setSelectedTeam] = useState('UX Design')
   const [viewMode, setViewMode] = useState<'list' | 'map'>('list')
 
-  const teams = ['UX Design', 'Engineering', 'Marketing', 'Sales', 'Product']
+  const teams = ['UX Design', 'Engineering', 'Quality Assurance', 'Sales', 'Product']
 
   const teamMembers = {
     'UX Design': [
@@ -27,10 +27,10 @@ const TeamPresence = () => {
       { name: 'Sam Patel', status: 'In Office', location: '2nd Floor – Dev Zone', avatar: '/placeholder.svg', initials: 'SP' },
       { name: 'Casey Wong', status: 'Remote', location: null, avatar: '/placeholder.svg', initials: 'CW' },
     ],
-    'Marketing': [
-      { name: 'Emma Davis', status: 'In Office', location: '3rd Floor – Marketing', avatar: '/placeholder.svg', initials: 'ED' },
+    'Quality Assurance': [
+      { name: 'Emma Davis', status: 'In Office', location: '2nd Floor – Test rigs', avatar: '/placeholder.svg', initials: 'ED' },
       { name: 'Ryan Scott', status: 'Remote', location: null, avatar: '/placeholder.svg', initials: 'RS' },
-      { name: 'Maya Singh', status: 'In Office', location: '3rd Floor – Marketing', avatar: '/placeholder.svg', initials: 'MS' },
+      { name: 'Maya Singh', status: 'In Office', location: '2nd Floor – Test rigs', avatar: '/placeholder.svg', initials: 'MS' },
     ],
     'Sales': [
       { name: 'Lisa Anderson', status: 'Out Today', location: null, avatar: '/placeholder.svg', initials: 'LA' },
@@ -58,7 +58,7 @@ const TeamPresence = () => {
   const zones = [
     { name: 'UX Wing', position: { x: 15, y: 20, width: 30, height: 35 } },
     { name: 'Dev Zone', position: { x: 55, y: 15, width: 35, height: 40 } },
-    { name: 'Marketing', position: { x: 20, y: 60, width: 40, height: 25 } },
+    { name: 'Test rigs', position: { x: 20, y: 60, width: 40, height: 25 } },
     { name: 'Sales', position: { x: 70, y: 65, width: 25, height: 20 } },
   ]
 
@@ -67,7 +67,7 @@ const TeamPresence = () => {
     
     if (location.includes('UX Wing')) return { x: 30, y: 37 }
     if (location.includes('Dev Zone')) return { x: 72, y: 35 }
-    if (location.includes('Marketing')) return { x: 40, y: 72 }
+    if (location.includes('Test rigs')) return { x: 40, y: 72 }
     if (location.includes('Sales')) return { x: 82, y: 75 }
     if (location.includes('Collaboration')) return { x: 50, y: 50 }
     

@@ -1,4 +1,3 @@
-
 import { useState } from 'react'
 import { Calendar, Clock, MapPin, Check } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -26,7 +25,7 @@ const BookDesk = () => {
   const zones = {
     '1st Floor': ['Reception Area', 'Lobby Workspaces'],
     '2nd Floor': ['UX Wing', 'Dev Zone', 'Collaboration Area'],
-    '3rd Floor': ['Sales', 'Marketing', 'Executive Suites']
+    '3rd Floor': ['Sales', 'Quality Assurance', 'Executive Suites']
   }
 
   const generateDesks = () => {

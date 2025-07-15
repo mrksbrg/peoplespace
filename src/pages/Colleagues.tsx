@@ -1,4 +1,3 @@
-
 import { useState } from 'react'
 import { Search, Filter, MapPin, MessageCircle } from 'lucide-react'
 import { Input } from '@/components/ui/input'
@@ -35,9 +34,9 @@ const Colleagues = () => {
     {
       id: 3,
       name: 'Emma Davis',
-      team: 'Marketing',
+      team: 'Quality Assurance',
       status: 'In Office',
-      location: '3rd Floor – Marketing',
+      location: '2nd Floor – Test rigs',
       avatar: '/placeholder.svg',
       initials: 'ED'
     },
@@ -61,7 +60,7 @@ const Colleagues = () => {
     }
   ]
 
-  const teams = ['UX Design', 'Engineering', 'Marketing', 'Sales']
+  const teams = ['UX Design', 'Engineering', 'Quality Assurance', 'Sales']
 
   const filteredColleagues = colleagues.filter(colleague => {
     const matchesSearch = colleague.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
