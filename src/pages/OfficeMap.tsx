@@ -26,6 +26,29 @@ const OfficeMap = () => {
     { name: 'Collaboration', color: 'bg-yellow-100 border-yellow-300', position: { x: 70, y: 65, width: 25, height: 20 } },
   ]
 
+  // Available desks positioned within their respective zones
+  const availableDesks = [
+    // UX Wing desks
+    { position: { x: 20, y: 35 }, zone: 'UX Wing' },
+    { position: { x: 35, y: 25 }, zone: 'UX Wing' },
+    { position: { x: 40, y: 50 }, zone: 'UX Wing' },
+    
+    // Dev Zone desks
+    { position: { x: 60, y: 20 }, zone: 'Dev Zone' },
+    { position: { x: 80, y: 35 }, zone: 'Dev Zone' },
+    { position: { x: 65, y: 50 }, zone: 'Dev Zone' },
+    { position: { x: 85, y: 45 }, zone: 'Dev Zone' },
+    
+    // Marketing desks
+    { position: { x: 25, y: 70 }, zone: 'Marketing' },
+    { position: { x: 50, y: 75 }, zone: 'Marketing' },
+    { position: { x: 35, y: 80 }, zone: 'Marketing' },
+    
+    // Collaboration desks
+    { position: { x: 75, y: 70 }, zone: 'Collaboration' },
+    { position: { x: 85, y: 80 }, zone: 'Collaboration' },
+  ]
+
   return (
     <div className="p-4 pb-20 max-w-md mx-auto space-y-6">
       {/* Header */}
@@ -101,16 +124,16 @@ const OfficeMap = () => {
               ></div>
             ))}
 
-            {/* Available Desks */}
-            {Array.from({ length: 8 }, (_, i) => (
+            {/* Available Desks - now positioned within zones */}
+            {availableDesks.map((desk, i) => (
               <div
                 key={i}
                 className="absolute w-2 h-2 bg-gray-300 border border-gray-400 rounded transform -translate-x-1/2 -translate-y-1/2"
                 style={{
-                  left: `${20 + (i * 8)}%`,
-                  top: `${85}%`,
+                  left: `${desk.position.x}%`,
+                  top: `${desk.position.y}%`,
                 }}
-                title="Available Desk"
+                title={`Available Desk - ${desk.zone}`}
               ></div>
             ))}
           </div>
