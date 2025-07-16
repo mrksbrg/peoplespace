@@ -29,8 +29,8 @@ const OfficeMap = () => {
         { name: 'Lisa R.', position: { x: 25, y: 30 }, zone: 'Reception' },
         { name: 'Tom B.', position: { x: 70, y: 35 }, zone: 'Cafeteria' },
         { name: 'Anna K.', position: { x: 30, y: 65 }, zone: 'Meeting Rooms' },
-        { name: 'Paul M.', position: { x: 11, y: 14 }, zone: 'Meeting Room' },
-        { name: 'Kelly S.', position: { x: 82, y: 13 }, zone: 'Meeting Room' },
+        { name: 'Paul M.', position: { x: 7, y: 6 }, zone: 'Meeting Room' },
+        { name: 'Kelly S.', position: { x: 93, y: 7 }, zone: 'Meeting Room' },
       ],
       myDesk: { position: { x: 20, y: 25 }, zone: 'Reception' },
       availableDesks: [
@@ -68,8 +68,8 @@ const OfficeMap = () => {
         { name: 'James W.', position: { x: 75, y: 25 }, zone: 'Dev Zone' },
         { name: 'Alex B.', position: { x: 9, y: 18 }, zone: 'Meeting Room' },
         { name: 'Sam P.', position: { x: 55, y: 9 }, zone: 'Meeting Room' },
-        { name: 'Rita H.', position: { x: 99, y: 23 }, zone: 'Meeting Room' },
-        { name: 'Nick L.', position: { x: 70, y: 94 }, zone: 'Meeting Room' },
+        { name: 'Rita H.', position: { x: 92, y: 23 }, zone: 'Meeting Room' },
+        { name: 'Nick L.', position: { x: 70, y: 89 }, zone: 'Meeting Room' },
       ],
       myDesk: { position: { x: 30, y: 45 }, zone: 'UX Wing' },
       availableDesks: [
@@ -106,7 +106,7 @@ const OfficeMap = () => {
         { name: 'Diana S.', position: { x: 75, y: 70 }, zone: 'Private Meeting' },
         { name: 'Mark T.', position: { x: 40, y: 25 }, zone: 'Executive Offices' },
         { name: 'CEO J.', position: { x: 9, y: 24 }, zone: 'Meeting Room' },
-        { name: 'VP K.', position: { x: 91, y: 19 }, zone: 'Meeting Room' },
+        { name: 'VP K.', position: { x: 89, y: 19 }, zone: 'Meeting Room' },
       ],
       myDesk: { position: { x: 65, y: 30 }, zone: 'Finance' },
       availableDesks: [
