@@ -206,12 +206,15 @@ const OfficeMap = () => {
         { name: 'Zara O.', position: { x: 81, y: 38 }, zone: 'Finance & Sales' },
         { name: 'Saya R.', position: { x: 84, y: 38 }, zone: 'Finance & Sales' },
         
-        // HR Department (5 people - moved 1 to meeting)
-        { name: 'Robert K.', position: { x: 26, y: 62 }, zone: 'HR Department' },
-        { name: 'Oliver P.', position: { x: 26, y: 76 }, zone: 'HR Department' },
-        { name: 'Grace W.', position: { x: 42, y: 78 }, zone: 'HR Department' },
-        { name: 'Lucas D.', position: { x: 24, y: 78 }, zone: 'HR Department' },
-        { name: 'Mia F.', position: { x: 38, y: 82 }, zone: 'HR Department' },
+        // HR Department (5 people) - Organized in 2 desk islands
+        // Island 1 - Left Recruitment Team
+        { name: 'Robert K.', position: { x: 24, y: 60 }, zone: 'HR Department' },
+        { name: 'Oliver P.', position: { x: 27, y: 60 }, zone: 'HR Department' },
+        { name: 'Grace W.', position: { x: 24, y: 64 }, zone: 'HR Department' },
+        
+        // Island 2 - Right Operations Team
+        { name: 'Lucas D.', position: { x: 38, y: 78 }, zone: 'HR Department' },
+        { name: 'Mia F.', position: { x: 41, y: 78 }, zone: 'HR Department' },
         
         // Collaboration (2 people) - Organized in desk islands
         // Island 1 - Left Creative Hub
@@ -232,10 +235,11 @@ const OfficeMap = () => {
         // Finance & Sales - Available desks organized in islands
         { position: { x: 64, y: 30 }, zone: 'Finance & Sales' }, // Island 1 - remaining spot
         { position: { x: 78, y: 42 }, zone: 'Finance & Sales' }, // Island 2 - remaining spot
-        { position: { x: 26, y: 58 }, zone: 'HR Department' },
-        { position: { x: 38, y: 58 }, zone: 'HR Department' },
-        { position: { x: 42, y: 62 }, zone: 'HR Department' },
-        { position: { x: 24, y: 68 }, zone: 'HR Department' },
+        // HR Department - Available desks organized in islands
+        { position: { x: 27, y: 64 }, zone: 'HR Department' }, // Island 1 - remaining spot
+        { position: { x: 30, y: 60 }, zone: 'HR Department' }, // Island 1 - remaining spot
+        { position: { x: 38, y: 82 }, zone: 'HR Department' }, // Island 2 - remaining spot
+        { position: { x: 41, y: 82 }, zone: 'HR Department' }, // Island 2 - remaining spot
         // Collaboration - Available desks organized in islands
         // Island 1 - Left Creative Hub
         { position: { x: 58, y: 72 }, zone: 'Collaboration' },
