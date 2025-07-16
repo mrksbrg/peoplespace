@@ -57,10 +57,65 @@ const OfficeMap = () => {
         { position: { x: 85, y: 85, width: 10, height: 8 } },
       ],
       colleagues: [
+        // UX Wing (9 people)
         { name: 'Sarah J.', position: { x: 20, y: 25 }, zone: 'UX Wing' },
+        { name: 'Maya C.', position: { x: 25, y: 30 }, zone: 'UX Wing' },
+        { name: 'Lucas R.', position: { x: 30, y: 35 }, zone: 'UX Wing' },
+        { name: 'Zoe K.', position: { x: 35, y: 40 }, zone: 'UX Wing' },
+        { name: 'Ryan P.', position: { x: 40, y: 30 }, zone: 'UX Wing' },
+        { name: 'Lily M.', position: { x: 25, y: 45 }, zone: 'UX Wing' },
+        { name: 'Noah T.', position: { x: 35, y: 25 }, zone: 'UX Wing' },
+        { name: 'Grace H.', position: { x: 30, y: 50 }, zone: 'UX Wing' },
+        { name: 'Ethan W.', position: { x: 40, y: 45 }, zone: 'UX Wing' },
+        
+        // Dev Zone (19 people)
         { name: 'Mike C.', position: { x: 70, y: 40 }, zone: 'Dev Zone' },
-        { name: 'Emma D.', position: { x: 30, y: 68 }, zone: 'Test Rigs' },
         { name: 'James W.', position: { x: 75, y: 25 }, zone: 'Dev Zone' },
+        { name: 'Sofia B.', position: { x: 60, y: 30 }, zone: 'Dev Zone' },
+        { name: 'Aaron L.', position: { x: 80, y: 35 }, zone: 'Dev Zone' },
+        { name: 'Mia G.', position: { x: 65, y: 45 }, zone: 'Dev Zone' },
+        { name: 'Owen D.', position: { x: 85, y: 30 }, zone: 'Dev Zone' },
+        { name: 'Chloe F.', position: { x: 70, y: 50 }, zone: 'Dev Zone' },
+        { name: 'Ian S.', position: { x: 75, y: 35 }, zone: 'Dev Zone' },
+        { name: 'Hazel N.', position: { x: 60, y: 45 }, zone: 'Dev Zone' },
+        { name: 'Blake R.', position: { x: 85, y: 40 }, zone: 'Dev Zone' },
+        { name: 'Vera J.', position: { x: 65, y: 25 }, zone: 'Dev Zone' },
+        { name: 'Kai M.', position: { x: 80, y: 50 }, zone: 'Dev Zone' },
+        { name: 'Ruby V.', position: { x: 70, y: 30 }, zone: 'Dev Zone' },
+        { name: 'Felix Q.', position: { x: 75, y: 45 }, zone: 'Dev Zone' },
+        { name: 'Iris C.', position: { x: 85, y: 25 }, zone: 'Dev Zone' },
+        { name: 'Jude A.', position: { x: 60, y: 50 }, zone: 'Dev Zone' },
+        { name: 'Sage E.', position: { x: 65, y: 35 }, zone: 'Dev Zone' },
+        { name: 'Rex O.', position: { x: 80, y: 30 }, zone: 'Dev Zone' },
+        { name: 'Ivy T.', position: { x: 75, y: 50 }, zone: 'Dev Zone' },
+        
+        // Test Rigs (9 people)
+        { name: 'Emma D.', position: { x: 30, y: 68 }, zone: 'Test Rigs' },
+        { name: 'Cole Z.', position: { x: 35, y: 75 }, zone: 'Test Rigs' },
+        { name: 'Nora X.', position: { x: 40, y: 70 }, zone: 'Test Rigs' },
+        { name: 'Dean Y.', position: { x: 45, y: 78 }, zone: 'Test Rigs' },
+        { name: 'Tess U.', position: { x: 25, y: 75 }, zone: 'Test Rigs' },
+        { name: 'Cruz I.', position: { x: 50, y: 65 }, zone: 'Test Rigs' },
+        { name: 'Lane K.', position: { x: 35, y: 65 }, zone: 'Test Rigs' },
+        { name: 'Jade P.', position: { x: 45, y: 72 }, zone: 'Test Rigs' },
+        { name: 'Ford L.', position: { x: 30, y: 80 }, zone: 'Test Rigs' },
+        
+        // Collaboration (13 people)
+        { name: 'Eve R.', position: { x: 75, y: 70 }, zone: 'Collaboration' },
+        { name: 'Clay S.', position: { x: 80, y: 75 }, zone: 'Collaboration' },
+        { name: 'Rose T.', position: { x: 85, y: 70 }, zone: 'Collaboration' },
+        { name: 'Jack V.', position: { x: 75, y: 80 }, zone: 'Collaboration' },
+        { name: 'Skye W.', position: { x: 90, y: 75 }, zone: 'Collaboration' },
+        { name: 'Reid X.', position: { x: 80, y: 68 }, zone: 'Collaboration' },
+        { name: 'Luna Y.', position: { x: 85, y: 82 }, zone: 'Collaboration' },
+        { name: 'Beck Z.', position: { x: 72, y: 75 }, zone: 'Collaboration' },
+        { name: 'Wren A.', position: { x: 88, y: 70 }, zone: 'Collaboration' },
+        { name: 'Knox B.', position: { x: 78, y: 82 }, zone: 'Collaboration' },
+        { name: 'Faye C.', position: { x: 92, y: 78 }, zone: 'Collaboration' },
+        { name: 'Zane D.', position: { x: 75, y: 68 }, zone: 'Collaboration' },
+        { name: 'Sage F.', position: { x: 83, y: 75 }, zone: 'Collaboration' },
+        
+        // Meeting Rooms
         { name: 'Alex B.', position: { x: 9, y: 18 }, zone: 'Meeting Room' },
         { name: 'Sam P.', position: { x: 55, y: 9 }, zone: 'Meeting Room' },
         { name: 'Rita H.', position: { x: 92, y: 23 }, zone: 'Meeting Room' },
@@ -95,11 +150,32 @@ const OfficeMap = () => {
         { position: { x: 5, y: 80, width: 12, height: 9 } },
       ],
       colleagues: [
+        // Executive Offices (2 people - keep existing)
         { name: 'David L.', position: { x: 22, y: 22 }, zone: 'Executive Offices' },
-        { name: 'Carol M.', position: { x: 78, y: 28 }, zone: 'Finance & Sales' },
-        { name: 'Robert K.', position: { x: 25, y: 62 }, zone: 'HR Department' },
-        { name: 'Diana S.', position: { x: 65, y: 65 }, zone: 'Collaboration' },
         { name: 'Mark T.', position: { x: 40, y: 25 }, zone: 'Executive Offices' },
+        
+        // Finance & Sales (13 people)
+        { name: 'Carol M.', position: { x: 78, y: 28 }, zone: 'Finance & Sales' },
+        { name: 'Ava Q.', position: { x: 60, y: 25 }, zone: 'Finance & Sales' },
+        { name: 'Leo H.', position: { x: 70, y: 35 }, zone: 'Finance & Sales' },
+        { name: 'Mae J.', position: { x: 80, y: 30 }, zone: 'Finance & Sales' },
+        { name: 'Finn K.', position: { x: 65, y: 40 }, zone: 'Finance & Sales' },
+        { name: 'Bree L.', position: { x: 75, y: 25 }, zone: 'Finance & Sales' },
+        { name: 'Jett M.', position: { x: 85, y: 35 }, zone: 'Finance & Sales' },
+        { name: 'Dove N.', position: { x: 58, y: 35 }, zone: 'Finance & Sales' },
+        { name: 'Zara O.', position: { x: 68, y: 30 }, zone: 'Finance & Sales' },
+        { name: 'Crew P.', position: { x: 83, y: 25 }, zone: 'Finance & Sales' },
+        { name: 'Saya R.', position: { x: 62, y: 40 }, zone: 'Finance & Sales' },
+        { name: 'Knox S.', position: { x: 77, y: 40 }, zone: 'Finance & Sales' },
+        { name: 'Willa T.', position: { x: 73, y: 30 }, zone: 'Finance & Sales' },
+        
+        // HR Department (1 person - keep existing)
+        { name: 'Robert K.', position: { x: 25, y: 62 }, zone: 'HR Department' },
+        
+        // Collaboration (keep existing)
+        { name: 'Diana S.', position: { x: 65, y: 65 }, zone: 'Collaboration' },
+        
+        // Meeting Rooms
         { name: 'CEO J.', position: { x: 9, y: 24 }, zone: 'Meeting Room' },
         { name: 'VP K.', position: { x: 89, y: 19 }, zone: 'Meeting Room' },
       ],
