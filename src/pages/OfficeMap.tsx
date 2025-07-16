@@ -109,16 +109,21 @@ const OfficeMap = () => {
         { name: 'Rex O.', position: { x: 81, y: 44 }, zone: 'Dev Zone' },
         { name: 'Ivy T.', position: { x: 84, y: 44 }, zone: 'Dev Zone' },
         
-        // Test Rigs (9 people)
-        { name: 'Emma D.', position: { x: 32, y: 68 }, zone: 'Test Rigs' },
-        { name: 'Cole Z.', position: { x: 36, y: 78 }, zone: 'Test Rigs' },
-        { name: 'Nora X.', position: { x: 48, y: 68 }, zone: 'Test Rigs' },
-        { name: 'Dean Y.', position: { x: 52, y: 78 }, zone: 'Test Rigs' },
-        { name: 'Tess U.', position: { x: 28, y: 78 }, zone: 'Test Rigs' },
-        { name: 'Cruz I.', position: { x: 52, y: 65 }, zone: 'Test Rigs' },
-        { name: 'Lane K.', position: { x: 36, y: 65 }, zone: 'Test Rigs' },
-        { name: 'Jade P.', position: { x: 48, y: 75 }, zone: 'Test Rigs' },
-        { name: 'Ford L.', position: { x: 32, y: 82 }, zone: 'Test Rigs' },
+        // Test Rigs (9 people) - Organized in 3 desk islands
+        // Island 1 - Left Testing Hub
+        { name: 'Emma D.', position: { x: 24, y: 64 }, zone: 'Test Rigs' },
+        { name: 'Cole Z.', position: { x: 27, y: 64 }, zone: 'Test Rigs' },
+        { name: 'Nora X.', position: { x: 30, y: 64 }, zone: 'Test Rigs' },
+        { name: 'Dean Y.', position: { x: 24, y: 68 }, zone: 'Test Rigs' },
+        
+        // Island 2 - Right QA Area
+        { name: 'Tess U.', position: { x: 50, y: 64 }, zone: 'Test Rigs' },
+        { name: 'Cruz I.', position: { x: 53, y: 64 }, zone: 'Test Rigs' },
+        { name: 'Lane K.', position: { x: 56, y: 64 }, zone: 'Test Rigs' },
+        
+        // Island 3 - Back Performance Team
+        { name: 'Jade P.', position: { x: 36, y: 78 }, zone: 'Test Rigs' },
+        { name: 'Ford L.', position: { x: 39, y: 78 }, zone: 'Test Rigs' },
         
         // Collaboration (13 people)
         { name: 'Eve R.', position: { x: 72, y: 68 }, zone: 'Collaboration' },
@@ -154,9 +159,10 @@ const OfficeMap = () => {
         { position: { x: 84, y: 24 }, zone: 'Dev Zone' }, // Island 2 - remaining spot
         { position: { x: 64, y: 48 }, zone: 'Dev Zone' }, // Island 3 - remaining spot  
         { position: { x: 78, y: 48 }, zone: 'Dev Zone' }, // Island 4 - remaining spot
-        { position: { x: 25, y: 70 }, zone: 'Test Rigs' },
-        { position: { x: 50, y: 75 }, zone: 'Test Rigs' },
-        { position: { x: 35, y: 80 }, zone: 'Test Rigs' },
+        // Test Rigs - Available desks organized in islands
+        { position: { x: 27, y: 68 }, zone: 'Test Rigs' }, // Island 1 - remaining spot
+        { position: { x: 50, y: 68 }, zone: 'Test Rigs' }, // Island 2 - remaining spot
+        { position: { x: 42, y: 78 }, zone: 'Test Rigs' }, // Island 3 - remaining spot
         { position: { x: 75, y: 70 }, zone: 'Collaboration' },
         { position: { x: 85, y: 80 }, zone: 'Collaboration' },
       ]
