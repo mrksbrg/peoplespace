@@ -193,15 +193,18 @@ const OfficeMap = () => {
         { name: 'James R.', position: { x: 38, y: 42 }, zone: 'Executive Offices' },
         { name: 'Lisa M.', position: { x: 26, y: 38 }, zone: 'Executive Offices' },
         
-         // Finance & Sales (8 people - moved 4 to meetings)
-        { name: 'Carol M.', position: { x: 78, y: 26 }, zone: 'Finance & Sales' },
-        { name: 'Ava Q.', position: { x: 62, y: 24 }, zone: 'Finance & Sales' },
-        { name: 'Leo H.', position: { x: 66, y: 38 }, zone: 'Finance & Sales' },
-        { name: 'Finn K.', position: { x: 64, y: 42 }, zone: 'Finance & Sales' },
-        { name: 'Bree L.', position: { x: 74, y: 24 }, zone: 'Finance & Sales' },
-        { name: 'Dove N.', position: { x: 58, y: 38 }, zone: 'Finance & Sales' },
-        { name: 'Zara O.', position: { x: 66, y: 28 }, zone: 'Finance & Sales' },
-        { name: 'Saya R.', position: { x: 62, y: 42 }, zone: 'Finance & Sales' },
+         // Finance & Sales (8 people) - Organized in 2 desk islands
+        // Island 1 - Front Sales Team
+        { name: 'Carol M.', position: { x: 58, y: 26 }, zone: 'Finance & Sales' },
+        { name: 'Ava Q.', position: { x: 61, y: 26 }, zone: 'Finance & Sales' },
+        { name: 'Leo H.', position: { x: 64, y: 26 }, zone: 'Finance & Sales' },
+        { name: 'Finn K.', position: { x: 58, y: 30 }, zone: 'Finance & Sales' },
+        { name: 'Bree L.', position: { x: 61, y: 30 }, zone: 'Finance & Sales' },
+        
+        // Island 2 - Back Finance Team
+        { name: 'Dove N.', position: { x: 78, y: 38 }, zone: 'Finance & Sales' },
+        { name: 'Zara O.', position: { x: 81, y: 38 }, zone: 'Finance & Sales' },
+        { name: 'Saya R.', position: { x: 84, y: 38 }, zone: 'Finance & Sales' },
         
         // HR Department (5 people - moved 1 to meeting)
         { name: 'Robert K.', position: { x: 26, y: 62 }, zone: 'HR Department' },
@@ -224,8 +227,9 @@ const OfficeMap = () => {
       ],
       myDesk: { position: { x: 65, y: 30 }, zone: 'Finance & Sales' },
       availableDesks: [
-        { position: { x: 62, y: 28 }, zone: 'Finance & Sales' },
-        { position: { x: 78, y: 42 }, zone: 'Finance & Sales' },
+        // Finance & Sales - Available desks organized in islands
+        { position: { x: 64, y: 30 }, zone: 'Finance & Sales' }, // Island 1 - remaining spot
+        { position: { x: 78, y: 42 }, zone: 'Finance & Sales' }, // Island 2 - remaining spot
         { position: { x: 26, y: 58 }, zone: 'HR Department' },
         { position: { x: 38, y: 58 }, zone: 'HR Department' },
         { position: { x: 42, y: 62 }, zone: 'HR Department' },
