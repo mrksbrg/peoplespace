@@ -26,7 +26,7 @@ const App = () => (
             <Route path="/colleagues" element={<Colleagues />} />
             <Route path="/book" element={<BookDesk />} />
             <Route path="/map" element={<OfficeMap />} />
-            <Route path="/team" element={<TeamPresence />} />
+            <Route path="/teams" element={<TeamPresence />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <BottomNav />

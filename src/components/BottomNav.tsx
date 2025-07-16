@@ -9,7 +9,7 @@ const BottomNav = () => {
     { icon: Users, label: 'Colleagues', path: '/colleagues' },
     { icon: Calendar, label: 'Book', path: '/book' },
     { icon: Map, label: 'Map', path: '/map' },
-    { icon: Team, label: 'Team', path: '/team' },
+    { icon: Team, label: 'Teams', path: '/teams' },
   ]
 
   return (

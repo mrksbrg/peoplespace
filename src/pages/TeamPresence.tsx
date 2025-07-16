@@ -49,7 +49,7 @@ const TeamPresence = () => {
     <div className="p-4 pb-20 max-w-md mx-auto space-y-6">
       {/* Header */}
       <div className="text-center py-4">
-        <h1 className="text-2xl font-bold text-gray-900">Team Presence</h1>
+        <h1 className="text-2xl font-bold text-gray-900">Teams Presence</h1>
         <p className="text-gray-500">See who's in the office</p>
       </div>
 
