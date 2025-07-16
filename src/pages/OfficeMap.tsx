@@ -105,8 +105,6 @@ const OfficeMap = () => {
       ],
       myDesk: { position: { x: 65, y: 30 }, zone: 'Finance & Sales' },
       availableDesks: [
-        { position: { x: 25, y: 40 }, zone: 'Executive Offices' },
-        { position: { x: 45, y: 35 }, zone: 'Executive Offices' },
         { position: { x: 60, y: 30 }, zone: 'Finance & Sales' },
         { position: { x: 80, y: 40 }, zone: 'Finance & Sales' },
         { position: { x: 30, y: 60 }, zone: 'HR Department' },
