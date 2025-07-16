@@ -18,10 +18,19 @@ const OfficeMap = () => {
         { name: 'Meeting Rooms', color: 'bg-blue-100 border-blue-300', position: { x: 15, y: 50, width: 30, height: 25 } },
         { name: 'Conference Center', color: 'bg-green-100 border-green-300', position: { x: 50, y: 60, width: 45, height: 30 } },
       ],
+      meetingRooms: [
+        { position: { x: 5, y: 10, width: 12, height: 8 } },
+        { position: { x: 20, y: 5, width: 15, height: 10 } },
+        { position: { x: 75, y: 10, width: 12, height: 9 } },
+        { position: { x: 85, y: 50, width: 14, height: 8 } },
+        { position: { x: 60, y: 85, width: 15, height: 10 } },
+      ],
       colleagues: [
         { name: 'Lisa R.', position: { x: 25, y: 30 }, zone: 'Reception' },
         { name: 'Tom B.', position: { x: 70, y: 35 }, zone: 'Cafeteria' },
         { name: 'Anna K.', position: { x: 30, y: 65 }, zone: 'Meeting Rooms' },
+        { name: 'Paul M.', position: { x: 11, y: 14 }, zone: 'Meeting Room' },
+        { name: 'Kelly S.', position: { x: 82, y: 13 }, zone: 'Meeting Room' },
       ],
       myDesk: { position: { x: 20, y: 25 }, zone: 'Reception' },
       availableDesks: [
@@ -40,11 +49,27 @@ const OfficeMap = () => {
         { name: 'Test rigs', color: 'bg-green-100 border-green-300', position: { x: 20, y: 60, width: 40, height: 25 } },
         { name: 'Collaboration', color: 'bg-yellow-100 border-yellow-300', position: { x: 70, y: 65, width: 25, height: 20 } },
       ],
+      meetingRooms: [
+        { position: { x: 5, y: 15, width: 8, height: 6 } },
+        { position: { x: 5, y: 30, width: 8, height: 6 } },
+        { position: { x: 5, y: 45, width: 8, height: 6 } },
+        { position: { x: 5, y: 60, width: 8, height: 6 } },
+        { position: { x: 50, y: 5, width: 10, height: 8 } },
+        { position: { x: 75, y: 5, width: 10, height: 8 } },
+        { position: { x: 95, y: 20, width: 8, height: 6 } },
+        { position: { x: 95, y: 35, width: 8, height: 6 } },
+        { position: { x: 65, y: 90, width: 10, height: 8 } },
+        { position: { x: 85, y: 90, width: 10, height: 8 } },
+      ],
       colleagues: [
         { name: 'Sarah J.', position: { x: 25, y: 30 }, zone: 'UX Wing' },
         { name: 'Mike C.', position: { x: 70, y: 40 }, zone: 'Dev Zone' },
         { name: 'Emma D.', position: { x: 45, y: 60 }, zone: 'Test rigs' },
         { name: 'James W.', position: { x: 75, y: 25 }, zone: 'Dev Zone' },
+        { name: 'Alex B.', position: { x: 9, y: 18 }, zone: 'Meeting Room' },
+        { name: 'Sam P.', position: { x: 55, y: 9 }, zone: 'Meeting Room' },
+        { name: 'Rita H.', position: { x: 99, y: 23 }, zone: 'Meeting Room' },
+        { name: 'Nick L.', position: { x: 70, y: 94 }, zone: 'Meeting Room' },
       ],
       myDesk: { position: { x: 30, y: 45 }, zone: 'UX Wing' },
       availableDesks: [
@@ -69,12 +94,19 @@ const OfficeMap = () => {
         { name: 'HR Department', color: 'bg-green-100 border-green-300', position: { x: 20, y: 55, width: 25, height: 30 } },
         { name: 'Private Meeting', color: 'bg-yellow-100 border-yellow-300', position: { x: 55, y: 60, width: 35, height: 25 } },
       ],
+      meetingRooms: [
+        { position: { x: 5, y: 20, width: 10, height: 8 } },
+        { position: { x: 85, y: 15, width: 12, height: 9 } },
+        { position: { x: 5, y: 80, width: 12, height: 9 } },
+      ],
       colleagues: [
         { name: 'David L.', position: { x: 30, y: 30 }, zone: 'Executive Offices' },
         { name: 'Carol M.', position: { x: 70, y: 35 }, zone: 'Finance' },
         { name: 'Robert K.', position: { x: 32, y: 70 }, zone: 'HR Department' },
         { name: 'Diana S.', position: { x: 75, y: 70 }, zone: 'Private Meeting' },
         { name: 'Mark T.', position: { x: 40, y: 25 }, zone: 'Executive Offices' },
+        { name: 'CEO J.', position: { x: 9, y: 24 }, zone: 'Meeting Room' },
+        { name: 'VP K.', position: { x: 91, y: 19 }, zone: 'Meeting Room' },
       ],
       myDesk: { position: { x: 65, y: 30 }, zone: 'Finance' },
       availableDesks: [
@@ -141,6 +173,20 @@ const OfficeMap = () => {
               </div>
             ))}
 
+            {/* Meeting Rooms */}
+            {currentFloorData.meetingRooms.map((room, index) => (
+              <div
+                key={`meeting-${index}`}
+                className="absolute border-2 rounded bg-red-100 border-red-300"
+                style={{
+                  left: `${room.position.x}%`,
+                  top: `${room.position.y}%`,
+                  width: `${room.position.width}%`,
+                  height: `${room.position.height}%`,
+                }}
+              ></div>
+            ))}
+
             {/* My Desk */}
             <div
               className="absolute w-4 h-4 bg-blue-500 border-2 border-blue-600 rounded-full flex items-center justify-center transform -translate-x-1/2 -translate-y-1/2 z-10"
@@ -202,6 +248,10 @@ const OfficeMap = () => {
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 bg-gray-300 border border-gray-400 rounded"></div>
               <span className="text-sm">Available Desks</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="w-4 h-3 bg-red-100 border-2 border-red-300 rounded"></div>
+              <span className="text-sm">Meeting Rooms</span>
             </div>
           </div>
         </CardContent>
