@@ -208,6 +208,16 @@ const OfficeMap = () => {
         { position: { x: 24, y: 68 }, zone: 'HR Department' },
         { position: { x: 68, y: 78 }, zone: 'Collaboration' },
         { position: { x: 82, y: 66 }, zone: 'Collaboration' },
+        { position: { x: 72, y: 72 }, zone: 'Collaboration' },
+        { position: { x: 78, y: 74 }, zone: 'Collaboration' },
+        { position: { x: 84, y: 72 }, zone: 'Collaboration' },
+        { position: { x: 76, y: 68 }, zone: 'Collaboration' },
+        { position: { x: 70, y: 76 }, zone: 'Collaboration' },
+        { position: { x: 86, y: 68 }, zone: 'Collaboration' },
+        { position: { x: 74, y: 82 }, zone: 'Collaboration' },
+        { position: { x: 80, y: 78 }, zone: 'Collaboration' },
+        { position: { x: 68, y: 72 }, zone: 'Collaboration' },
+        { position: { x: 82, y: 82 }, zone: 'Collaboration' },
       ]
     }
   }
