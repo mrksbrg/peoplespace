@@ -19,10 +19,10 @@ const OfficeMap = () => {
         { name: 'Conference Center', color: 'bg-green-100 border-green-300', position: { x: 50, y: 60, width: 45, height: 30 } },
       ],
       meetingRooms: [
-        { position: { x: 5, y: 10, width: 12, height: 8 } },
-        { position: { x: 20, y: 5, width: 15, height: 10 } },
+        { position: { x: 2, y: 2, width: 12, height: 8 } },
+        { position: { x: 90, y: 2, width: 8, height: 10 } },
         { position: { x: 75, y: 10, width: 12, height: 9 } },
-        { position: { x: 85, y: 50, width: 14, height: 8 } },
+        { position: { x: 2, y: 85, width: 14, height: 8 } },
         { position: { x: 60, y: 85, width: 15, height: 10 } },
       ],
       colleagues: [
@@ -56,10 +56,10 @@ const OfficeMap = () => {
         { position: { x: 5, y: 60, width: 8, height: 6 } },
         { position: { x: 50, y: 5, width: 10, height: 8 } },
         { position: { x: 75, y: 5, width: 10, height: 8 } },
-        { position: { x: 95, y: 20, width: 8, height: 6 } },
-        { position: { x: 95, y: 35, width: 8, height: 6 } },
-        { position: { x: 65, y: 90, width: 10, height: 8 } },
-        { position: { x: 85, y: 90, width: 10, height: 8 } },
+        { position: { x: 90, y: 20, width: 8, height: 6 } },
+        { position: { x: 90, y: 35, width: 8, height: 6 } },
+        { position: { x: 65, y: 85, width: 10, height: 8 } },
+        { position: { x: 85, y: 85, width: 10, height: 8 } },
       ],
       colleagues: [
         { name: 'Sarah J.', position: { x: 25, y: 30 }, zone: 'UX Wing' },
