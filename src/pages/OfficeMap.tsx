@@ -397,7 +397,7 @@ const OfficeMap = () => {
             </div>
             <div className="flex items-center gap-3">
               <div className="w-4 h-3 bg-red-100 border-2 border-red-300 rounded"></div>
-              <span className="text-sm">Showroom</span>
+              <span className="text-sm">Meeting Room</span>
             </div>
           </div>
         </CardContent>
