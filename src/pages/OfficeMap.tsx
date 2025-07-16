@@ -194,7 +194,7 @@ const OfficeMap = () => {
                 left: `${currentFloorData.myDesk.position.x}%`,
                 top: `${currentFloorData.myDesk.position.y}%`,
               }}
-              title="Your Desk"
+              title="Your Position"
             >
               <div className="w-2 h-2 bg-white rounded-full"></div>
             </div>
@@ -239,7 +239,7 @@ const OfficeMap = () => {
               <div className="w-4 h-4 bg-blue-500 border-2 border-blue-600 rounded-full flex items-center justify-center">
                 <div className="w-2 h-2 bg-white rounded-full"></div>
               </div>
-              <span className="text-sm">Your Desk</span>
+              <span className="text-sm">Your Position</span>
             </div>
             <div className="flex items-center gap-3">
               <div className="w-3 h-3 bg-green-500 border-2 border-green-600 rounded-full"></div>
