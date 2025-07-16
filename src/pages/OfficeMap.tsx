@@ -81,26 +81,33 @@ const OfficeMap = () => {
         { name: 'Grace H.', position: { x: 39, y: 27 }, zone: 'UX Wing' },
         { name: 'Ethan W.', position: { x: 42, y: 27 }, zone: 'UX Wing' },
         
-        // Dev Zone (19 people)
-        { name: 'Mike C.', position: { x: 68, y: 42 }, zone: 'Dev Zone' },
-        { name: 'James W.', position: { x: 78, y: 28 }, zone: 'Dev Zone' },
-        { name: 'Sofia B.', position: { x: 62, y: 32 }, zone: 'Dev Zone' },
-        { name: 'Aaron L.', position: { x: 82, y: 38 }, zone: 'Dev Zone' },
-        { name: 'Mia G.', position: { x: 66, y: 48 }, zone: 'Dev Zone' },
-        { name: 'Owen D.', position: { x: 86, y: 32 }, zone: 'Dev Zone' },
-        { name: 'Chloe F.', position: { x: 68, y: 52 }, zone: 'Dev Zone' },
-        { name: 'Ian S.', position: { x: 78, y: 38 }, zone: 'Dev Zone' },
-        { name: 'Hazel N.', position: { x: 62, y: 48 }, zone: 'Dev Zone' },
-        { name: 'Blake R.', position: { x: 86, y: 42 }, zone: 'Dev Zone' },
-        { name: 'Vera J.', position: { x: 66, y: 28 }, zone: 'Dev Zone' },
-        { name: 'Kai M.', position: { x: 82, y: 52 }, zone: 'Dev Zone' },
-        { name: 'Ruby V.', position: { x: 68, y: 32 }, zone: 'Dev Zone' },
-        { name: 'Felix Q.', position: { x: 78, y: 48 }, zone: 'Dev Zone' },
-        { name: 'Iris C.', position: { x: 86, y: 28 }, zone: 'Dev Zone' },
-        { name: 'Jude A.', position: { x: 62, y: 52 }, zone: 'Dev Zone' },
-        { name: 'Sage E.', position: { x: 66, y: 38 }, zone: 'Dev Zone' },
-        { name: 'Rex O.', position: { x: 82, y: 32 }, zone: 'Dev Zone' },
-        { name: 'Ivy T.', position: { x: 78, y: 52 }, zone: 'Dev Zone' },
+        // Dev Zone (19 people) - Organized in 4 desk islands
+        // Island 1 - Front Left (Team A)
+        { name: 'Mike C.', position: { x: 58, y: 20 }, zone: 'Dev Zone' },
+        { name: 'James W.', position: { x: 61, y: 20 }, zone: 'Dev Zone' },
+        { name: 'Sofia B.', position: { x: 64, y: 20 }, zone: 'Dev Zone' },
+        { name: 'Aaron L.', position: { x: 58, y: 24 }, zone: 'Dev Zone' },
+        { name: 'Mia G.', position: { x: 61, y: 24 }, zone: 'Dev Zone' },
+        { name: 'Owen D.', position: { x: 64, y: 24 }, zone: 'Dev Zone' },
+        
+        // Island 2 - Front Right (Team B) 
+        { name: 'Chloe F.', position: { x: 78, y: 20 }, zone: 'Dev Zone' },
+        { name: 'Ian S.', position: { x: 81, y: 20 }, zone: 'Dev Zone' },
+        { name: 'Hazel N.', position: { x: 84, y: 20 }, zone: 'Dev Zone' },
+        { name: 'Blake R.', position: { x: 78, y: 24 }, zone: 'Dev Zone' },
+        { name: 'Vera J.', position: { x: 81, y: 24 }, zone: 'Dev Zone' },
+        
+        // Island 3 - Back Left (Team C)
+        { name: 'Kai M.', position: { x: 58, y: 44 }, zone: 'Dev Zone' },
+        { name: 'Ruby V.', position: { x: 61, y: 44 }, zone: 'Dev Zone' },
+        { name: 'Felix Q.', position: { x: 64, y: 44 }, zone: 'Dev Zone' },
+        { name: 'Iris C.', position: { x: 58, y: 48 }, zone: 'Dev Zone' },
+        { name: 'Jude A.', position: { x: 61, y: 48 }, zone: 'Dev Zone' },
+        
+        // Island 4 - Back Right (Senior Team)
+        { name: 'Sage E.', position: { x: 78, y: 44 }, zone: 'Dev Zone' },
+        { name: 'Rex O.', position: { x: 81, y: 44 }, zone: 'Dev Zone' },
+        { name: 'Ivy T.', position: { x: 84, y: 44 }, zone: 'Dev Zone' },
         
         // Test Rigs (9 people)
         { name: 'Emma D.', position: { x: 32, y: 68 }, zone: 'Test Rigs' },
@@ -142,10 +149,11 @@ const OfficeMap = () => {
         { position: { x: 25, y: 32 }, zone: 'UX Wing' }, // Island 1 - remaining spot
         { position: { x: 42, y: 47 }, zone: 'UX Wing' }, // Island 2 - remaining spot  
         { position: { x: 39, y: 30 }, zone: 'UX Wing' }, // Island 3 - remaining spot
-        { position: { x: 60, y: 20 }, zone: 'Dev Zone' },
-        { position: { x: 80, y: 35 }, zone: 'Dev Zone' },
-        { position: { x: 65, y: 50 }, zone: 'Dev Zone' },
-        { position: { x: 85, y: 45 }, zone: 'Dev Zone' },
+        // Dev Zone - Available desks organized in islands
+        { position: { x: 58, y: 28 }, zone: 'Dev Zone' }, // Island 1 - remaining spot
+        { position: { x: 84, y: 24 }, zone: 'Dev Zone' }, // Island 2 - remaining spot
+        { position: { x: 64, y: 48 }, zone: 'Dev Zone' }, // Island 3 - remaining spot  
+        { position: { x: 78, y: 48 }, zone: 'Dev Zone' }, // Island 4 - remaining spot
         { position: { x: 25, y: 70 }, zone: 'Test Rigs' },
         { position: { x: 50, y: 75 }, zone: 'Test Rigs' },
         { position: { x: 35, y: 80 }, zone: 'Test Rigs' },
