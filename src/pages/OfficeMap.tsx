@@ -92,7 +92,7 @@ const OfficeMap = () => {
   const currentFloorData = floorData[selectedFloor as keyof typeof floorData]
 
   return (
-    <div className="p-4 pb-20 max-w-md mx-auto space-y-6">
+    <div className="p-4 pb-20 max-w-4xl mx-auto space-y-6">
       {/* Header */}
       <div className="text-center py-4">
         <h1 className="text-2xl font-bold text-gray-900">Office Map</h1>
@@ -124,7 +124,7 @@ const OfficeMap = () => {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="relative bg-gray-50 rounded-lg aspect-square border-2 border-gray-200 overflow-hidden">
+          <div className="relative bg-gray-50 rounded-lg aspect-video border-2 border-gray-200 overflow-hidden">
             {/* Zones */}
             {currentFloorData.zones.map(zone => (
               <div
