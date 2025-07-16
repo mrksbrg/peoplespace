@@ -67,16 +67,19 @@ const OfficeMap = () => {
         { position: { x: 85, y: 85, width: 10, height: 8 } },
       ],
       colleagues: [
-        // UX Wing (9 people)
-        { name: 'Sarah J.', position: { x: 22, y: 28 }, zone: 'UX Wing' },
-        { name: 'Maya C.', position: { x: 26, y: 32 }, zone: 'UX Wing' },
-        { name: 'Lucas R.', position: { x: 36, y: 42 }, zone: 'UX Wing' },
-        { name: 'Zoe K.', position: { x: 38, y: 46 }, zone: 'UX Wing' },
-        { name: 'Ryan P.', position: { x: 42, y: 32 }, zone: 'UX Wing' },
-        { name: 'Lily M.', position: { x: 24, y: 48 }, zone: 'UX Wing' },
-        { name: 'Noah T.', position: { x: 38, y: 26 }, zone: 'UX Wing' },
-        { name: 'Grace H.', position: { x: 26, y: 52 }, zone: 'UX Wing' },
-        { name: 'Ethan W.', position: { x: 42, y: 48 }, zone: 'UX Wing' },
+        // UX Wing (9 people) - Organized in desk islands
+        // Island 1 - Left Collaborative Hub
+        { name: 'Sarah J.', position: { x: 19, y: 28 }, zone: 'UX Wing' },
+        { name: 'Maya C.', position: { x: 22, y: 28 }, zone: 'UX Wing' },
+        { name: 'Lucas R.', position: { x: 25, y: 28 }, zone: 'UX Wing' },
+        { name: 'Zoe K.', position: { x: 19, y: 32 }, zone: 'UX Wing' },
+        { name: 'Ryan P.', position: { x: 22, y: 32 }, zone: 'UX Wing' },
+        // Island 2 - Right Focus Area  
+        { name: 'Lily M.', position: { x: 36, y: 47 }, zone: 'UX Wing' },
+        { name: 'Noah T.', position: { x: 39, y: 47 }, zone: 'UX Wing' },
+        // Island 3 - Senior Corner
+        { name: 'Grace H.', position: { x: 39, y: 27 }, zone: 'UX Wing' },
+        { name: 'Ethan W.', position: { x: 42, y: 27 }, zone: 'UX Wing' },
         
         // Dev Zone (19 people)
         { name: 'Mike C.', position: { x: 68, y: 42 }, zone: 'Dev Zone' },
@@ -135,9 +138,10 @@ const OfficeMap = () => {
       ],
       myDesk: { position: { x: 30, y: 45 }, zone: 'UX Wing' },
       availableDesks: [
-        { position: { x: 20, y: 35 }, zone: 'UX Wing' },
-        { position: { x: 35, y: 25 }, zone: 'UX Wing' },
-        { position: { x: 40, y: 50 }, zone: 'UX Wing' },
+        // UX Wing - Available desks in organized islands
+        { position: { x: 25, y: 32 }, zone: 'UX Wing' }, // Island 1 - remaining spot
+        { position: { x: 42, y: 47 }, zone: 'UX Wing' }, // Island 2 - remaining spot  
+        { position: { x: 39, y: 30 }, zone: 'UX Wing' }, // Island 3 - remaining spot
         { position: { x: 60, y: 20 }, zone: 'Dev Zone' },
         { position: { x: 80, y: 35 }, zone: 'Dev Zone' },
         { position: { x: 65, y: 50 }, zone: 'Dev Zone' },
