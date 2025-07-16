@@ -15,7 +15,7 @@ const OfficeMap = () => {
       zones: [
         { name: 'Reception', color: 'bg-purple-100 border-purple-300', position: { x: 10, y: 15, width: 35, height: 30 } },
         { name: 'Cafeteria', color: 'bg-orange-100 border-orange-300', position: { x: 50, y: 20, width: 40, height: 35 } },
-        { name: 'Meeting Rooms', color: 'bg-blue-100 border-blue-300', position: { x: 15, y: 50, width: 30, height: 25 } },
+        { name: 'Showroom', color: 'bg-blue-100 border-blue-300', position: { x: 15, y: 50, width: 30, height: 25 } },
         { name: 'Conference Center', color: 'bg-green-100 border-green-300', position: { x: 50, y: 60, width: 45, height: 30 } },
       ],
       meetingRooms: [
@@ -28,7 +28,7 @@ const OfficeMap = () => {
       colleagues: [
         { name: 'Lisa R.', position: { x: 18, y: 25 }, zone: 'Reception' },
         { name: 'Tom B.', position: { x: 58, y: 28 }, zone: 'Cafeteria' },
-        { name: 'Anna K.', position: { x: 22, y: 58 }, zone: 'Meeting Rooms' },
+        { name: 'Anna K.', position: { x: 22, y: 58 }, zone: 'Showroom' },
         { name: 'Paul M.', position: { x: 7, y: 6 }, zone: 'Meeting Room' },
         { name: 'Kelly S.', position: { x: 93, y: 7 }, zone: 'Meeting Room' },
       ],
@@ -38,7 +38,7 @@ const OfficeMap = () => {
         { position: { x: 40, y: 25 }, zone: 'Reception' },
         { position: { x: 60, y: 30 }, zone: 'Cafeteria' },
         { position: { x: 80, y: 40 }, zone: 'Cafeteria' },
-        { position: { x: 25, y: 70 }, zone: 'Meeting Rooms' },
+        { position: { x: 25, y: 70 }, zone: 'Showroom' },
         { position: { x: 65, y: 75 }, zone: 'Conference Center' },
       ]
     },
@@ -251,7 +251,7 @@ const OfficeMap = () => {
             </div>
             <div className="flex items-center gap-3">
               <div className="w-4 h-3 bg-red-100 border-2 border-red-300 rounded"></div>
-              <span className="text-sm">Meeting Rooms</span>
+              <span className="text-sm">Showroom</span>
             </div>
           </div>
         </CardContent>
