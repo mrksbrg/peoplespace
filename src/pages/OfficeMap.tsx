@@ -125,20 +125,25 @@ const OfficeMap = () => {
         { name: 'Jade P.', position: { x: 36, y: 78 }, zone: 'Test Rigs' },
         { name: 'Ford L.', position: { x: 39, y: 78 }, zone: 'Test Rigs' },
         
-        // Collaboration (13 people)
+        // Collaboration (13 people) - Organized in 3 desk islands
+        // Island 1 - Left Creative Hub
         { name: 'Eve R.', position: { x: 72, y: 68 }, zone: 'Collaboration' },
-        { name: 'Clay S.', position: { x: 78, y: 78 }, zone: 'Collaboration' },
-        { name: 'Rose T.', position: { x: 88, y: 68 }, zone: 'Collaboration' },
-        { name: 'Jack V.', position: { x: 72, y: 82 }, zone: 'Collaboration' },
-        { name: 'Skye W.', position: { x: 92, y: 78 }, zone: 'Collaboration' },
-        { name: 'Reid X.', position: { x: 78, y: 66 }, zone: 'Collaboration' },
-        { name: 'Luna Y.', position: { x: 88, y: 82 }, zone: 'Collaboration' },
-        { name: 'Beck Z.', position: { x: 74, y: 78 }, zone: 'Collaboration' },
-        { name: 'Wren A.', position: { x: 92, y: 68 }, zone: 'Collaboration' },
-        { name: 'Knox B.', position: { x: 76, y: 82 }, zone: 'Collaboration' },
-        { name: 'Faye C.', position: { x: 94, y: 78 }, zone: 'Collaboration' },
-        { name: 'Zane D.', position: { x: 72, y: 66 }, zone: 'Collaboration' },
-        { name: 'Sage F.', position: { x: 86, y: 78 }, zone: 'Collaboration' },
+        { name: 'Clay S.', position: { x: 75, y: 68 }, zone: 'Collaboration' },
+        { name: 'Rose T.', position: { x: 78, y: 68 }, zone: 'Collaboration' },
+        { name: 'Jack V.', position: { x: 72, y: 72 }, zone: 'Collaboration' },
+        { name: 'Skye W.', position: { x: 75, y: 72 }, zone: 'Collaboration' },
+        
+        // Island 2 - Right Innovation Area
+        { name: 'Reid X.', position: { x: 88, y: 68 }, zone: 'Collaboration' },
+        { name: 'Luna Y.', position: { x: 91, y: 68 }, zone: 'Collaboration' },
+        { name: 'Beck Z.', position: { x: 94, y: 68 }, zone: 'Collaboration' },
+        { name: 'Wren A.', position: { x: 88, y: 72 }, zone: 'Collaboration' },
+        { name: 'Knox B.', position: { x: 91, y: 72 }, zone: 'Collaboration' },
+        
+        // Island 3 - Back Strategy Corner
+        { name: 'Faye C.', position: { x: 80, y: 80 }, zone: 'Collaboration' },
+        { name: 'Zane D.', position: { x: 83, y: 80 }, zone: 'Collaboration' },
+        { name: 'Sage F.', position: { x: 86, y: 80 }, zone: 'Collaboration' },
         
         // Meeting Rooms - 2nd Floor Meeting Room 2 (2 people meeting)
         { name: 'Alex B.', position: { x: 9, y: 18 }, zone: 'Meeting Room' },
@@ -163,8 +168,9 @@ const OfficeMap = () => {
         { position: { x: 27, y: 68 }, zone: 'Test Rigs' }, // Island 1 - remaining spot
         { position: { x: 50, y: 68 }, zone: 'Test Rigs' }, // Island 2 - remaining spot
         { position: { x: 42, y: 78 }, zone: 'Test Rigs' }, // Island 3 - remaining spot
-        { position: { x: 75, y: 70 }, zone: 'Collaboration' },
-        { position: { x: 85, y: 80 }, zone: 'Collaboration' },
+        // Collaboration - Available desks organized in islands
+        { position: { x: 78, y: 72 }, zone: 'Collaboration' }, // Island 1 - remaining spot
+        { position: { x: 94, y: 72 }, zone: 'Collaboration' }, // Island 2 - remaining spot
       ]
     },
     '3rd Floor': {
