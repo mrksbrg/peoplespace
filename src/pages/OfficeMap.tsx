@@ -46,7 +46,7 @@ const OfficeMap = () => {
       zones: [
         { name: 'UX Wing', color: 'bg-purple-100 border-purple-300', position: { x: 15, y: 20, width: 30, height: 35 } },
         { name: 'Dev Zone', color: 'bg-blue-100 border-blue-300', position: { x: 55, y: 15, width: 35, height: 40 } },
-        { name: 'Test rigs', color: 'bg-green-100 border-green-300', position: { x: 20, y: 60, width: 40, height: 25 } },
+        { name: 'Test Rigs', color: 'bg-green-100 border-green-300', position: { x: 20, y: 60, width: 40, height: 25 } },
         { name: 'Collaboration', color: 'bg-yellow-100 border-yellow-300', position: { x: 70, y: 65, width: 25, height: 20 } },
       ],
       meetingRooms: [
@@ -64,7 +64,7 @@ const OfficeMap = () => {
       colleagues: [
         { name: 'Sarah J.', position: { x: 20, y: 25 }, zone: 'UX Wing' },
         { name: 'Mike C.', position: { x: 70, y: 40 }, zone: 'Dev Zone' },
-        { name: 'Emma D.', position: { x: 30, y: 68 }, zone: 'Test rigs' },
+        { name: 'Emma D.', position: { x: 30, y: 68 }, zone: 'Test Rigs' },
         { name: 'James W.', position: { x: 75, y: 25 }, zone: 'Dev Zone' },
         { name: 'Alex B.', position: { x: 9, y: 18 }, zone: 'Meeting Room' },
         { name: 'Sam P.', position: { x: 55, y: 9 }, zone: 'Meeting Room' },
@@ -80,9 +80,9 @@ const OfficeMap = () => {
         { position: { x: 80, y: 35 }, zone: 'Dev Zone' },
         { position: { x: 65, y: 50 }, zone: 'Dev Zone' },
         { position: { x: 85, y: 45 }, zone: 'Dev Zone' },
-        { position: { x: 25, y: 70 }, zone: 'Test rigs' },
-        { position: { x: 50, y: 75 }, zone: 'Test rigs' },
-        { position: { x: 35, y: 80 }, zone: 'Test rigs' },
+        { position: { x: 25, y: 70 }, zone: 'Test Rigs' },
+        { position: { x: 50, y: 75 }, zone: 'Test Rigs' },
+        { position: { x: 35, y: 80 }, zone: 'Test Rigs' },
         { position: { x: 75, y: 70 }, zone: 'Collaboration' },
         { position: { x: 85, y: 80 }, zone: 'Collaboration' },
       ]
