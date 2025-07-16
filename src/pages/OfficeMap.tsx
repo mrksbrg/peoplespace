@@ -186,12 +186,16 @@ const OfficeMap = () => {
         { position: { x: 5, y: 80, width: 12, height: 9 } },
       ],
       colleagues: [
-        // Executive Offices (5 people)
-        { name: 'David L.', position: { x: 24, y: 24 }, zone: 'Executive Offices' },
-        { name: 'Mark T.', position: { x: 42, y: 26 }, zone: 'Executive Offices' },
-        { name: 'Sarah C.', position: { x: 36, y: 38 }, zone: 'Executive Offices' },
-        { name: 'James R.', position: { x: 38, y: 42 }, zone: 'Executive Offices' },
-        { name: 'Lisa M.', position: { x: 26, y: 38 }, zone: 'Executive Offices' },
+        // Executive Offices (5 people) - Separated into individual offices
+        // CEO Office (top-left)
+        { name: 'David L.', position: { x: 20, y: 20 }, zone: 'Executive Offices' },
+        // CTO Office (top-right) 
+        { name: 'Mark T.', position: { x: 45, y: 20 }, zone: 'Executive Offices' },
+        // CFO Office (bottom-left)
+        { name: 'Sarah C.', position: { x: 20, y: 40 }, zone: 'Executive Offices' },
+        // COO & VP Meeting (bottom-right - in discussion)
+        { name: 'James R.', position: { x: 42, y: 38 }, zone: 'Executive Offices' },
+        { name: 'Lisa M.', position: { x: 46, y: 40 }, zone: 'Executive Offices' },
         
          // Finance & Sales (8 people) - Organized in 2 desk islands
         // Island 1 - Front Sales Team
