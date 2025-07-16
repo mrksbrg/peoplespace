@@ -9,39 +9,7 @@ const OfficeMap = () => {
 
   const floors = ['1st Floor', '2nd Floor', '3rd Floor']
   
-  // Helper function to create desk grid patterns
-  const createDeskGrid = (startX: number, startY: number, rows: number, cols: number, spacing: number) => {
-    const desks = []
-    for (let row = 0; row < rows; row++) {
-      for (let col = 0; col < cols; col++) {
-        desks.push({
-          x: startX + (col * spacing),
-          y: startY + (row * spacing)
-        })
-      }
-    }
-    return desks
-  }
-
-  // Helper function to create desk islands (4-desk clusters)
-  const createDeskIslands = (centerX: number, centerY: number, count: number, spacing: number) => {
-    const islands = []
-    for (let i = 0; i < count; i++) {
-      const offsetX = (i % 2) * spacing * 3
-      const offsetY = Math.floor(i / 2) * spacing * 2.5
-      
-      // Create 4-desk island
-      islands.push(
-        { x: centerX + offsetX - 1, y: centerY + offsetY - 1 },
-        { x: centerX + offsetX + 1, y: centerY + offsetY - 1 },
-        { x: centerX + offsetX - 1, y: centerY + offsetY + 1 },
-        { x: centerX + offsetX + 1, y: centerY + offsetY + 1 }
-      )
-    }
-    return islands
-  }
-
-  // Floor-specific data with realistic desk layouts and ~100 employees
+  // Floor-specific data
   const floorData = {
     '1st Floor': {
       zones: [
@@ -51,31 +19,18 @@ const OfficeMap = () => {
         { name: 'Conference Center', color: 'bg-green-100 border-green-300', position: { x: 50, y: 60, width: 45, height: 30 } },
       ],
       colleagues: [
-        // Reception area - linear desk arrangement
-        ...createDeskGrid(15, 20, 2, 3, 4).map((pos, i) => ({ 
-          name: `Reception ${i + 1}`, position: pos, zone: 'Reception' 
-        })),
-        // Cafeteria staff and visitors
-        { name: 'Chef Maria', position: { x: 55, y: 25 }, zone: 'Cafeteria' },
-        { name: 'Staff Tom', position: { x: 65, y: 30 }, zone: 'Cafeteria' },
-        { name: 'Visitor A', position: { x: 75, y: 35 }, zone: 'Cafeteria' },
-        { name: 'Visitor B', position: { x: 85, y: 40 }, zone: 'Cafeteria' },
-        // Meeting rooms
-        { name: 'Consultant J', position: { x: 20, y: 55 }, zone: 'Meeting Rooms' },
-        { name: 'Client Rep', position: { x: 30, y: 60 }, zone: 'Meeting Rooms' },
-        { name: 'Trainer K', position: { x: 40, y: 65 }, zone: 'Meeting Rooms' },
-        // Conference center
-        { name: 'Event Coord', position: { x: 60, y: 65 }, zone: 'Conference Center' },
-        { name: 'AV Tech', position: { x: 80, y: 70 }, zone: 'Conference Center' },
+        { name: 'Lisa R.', position: { x: 25, y: 30 }, zone: 'Reception' },
+        { name: 'Tom B.', position: { x: 70, y: 35 }, zone: 'Cafeteria' },
+        { name: 'Anna K.', position: { x: 30, y: 65 }, zone: 'Meeting Rooms' },
       ],
-      myDesk: { position: { x: 19, y: 24 }, zone: 'Reception' },
+      myDesk: { position: { x: 20, y: 25 }, zone: 'Reception' },
       availableDesks: [
-        // 5 available desks on 1st floor
-        { position: { x: 27, y: 24 }, zone: 'Reception' },
-        { position: { x: 70, y: 45 }, zone: 'Cafeteria' },
+        { position: { x: 35, y: 35 }, zone: 'Reception' },
+        { position: { x: 40, y: 25 }, zone: 'Reception' },
+        { position: { x: 60, y: 30 }, zone: 'Cafeteria' },
+        { position: { x: 80, y: 40 }, zone: 'Cafeteria' },
         { position: { x: 25, y: 70 }, zone: 'Meeting Rooms' },
         { position: { x: 65, y: 75 }, zone: 'Conference Center' },
-        { position: { x: 90, y: 80 }, zone: 'Conference Center' },
       ]
     },
     '2nd Floor': {
@@ -86,35 +41,25 @@ const OfficeMap = () => {
         { name: 'Collaboration', color: 'bg-yellow-100 border-yellow-300', position: { x: 70, y: 65, width: 25, height: 20 } },
       ],
       colleagues: [
-        // UX Wing - desk islands pattern
-        ...createDeskIslands(25, 35, 3, 3).map((pos, i) => ({ 
-          name: `UX ${i + 1}`, position: pos, zone: 'UX Wing' 
-        })),
-        // Dev Zone - linear rows with islands
-        ...createDeskGrid(60, 20, 3, 4, 3).map((pos, i) => ({ 
-          name: `Dev ${i + 1}`, position: pos, zone: 'Dev Zone' 
-        })),
-        ...createDeskIslands(75, 35, 2, 4).map((pos, i) => ({ 
-          name: `Sr Dev ${i + 1}`, position: pos, zone: 'Dev Zone' 
-        })),
-        // Test rigs - equipment stations
-        ...createDeskGrid(25, 65, 2, 5, 4).map((pos, i) => ({ 
-          name: `QA ${i + 1}`, position: pos, zone: 'Test rigs' 
-        })),
-        // Collaboration area
-        { name: 'Scrum Master', position: { x: 75, y: 70 }, zone: 'Collaboration' },
-        { name: 'Product Mgr', position: { x: 85, y: 75 }, zone: 'Collaboration' },
+        { name: 'Sarah J.', position: { x: 25, y: 30 }, zone: 'UX Wing' },
+        { name: 'Mike C.', position: { x: 70, y: 40 }, zone: 'Dev Zone' },
+        { name: 'Emma D.', position: { x: 45, y: 60 }, zone: 'Test rigs' },
+        { name: 'James W.', position: { x: 75, y: 25 }, zone: 'Dev Zone' },
       ],
-      myDesk: { position: { x: 26, y: 34 }, zone: 'UX Wing' },
+      myDesk: { position: { x: 30, y: 45 }, zone: 'UX Wing' },
       availableDesks: [
-        // 30 available desks on main work floor
-        ...createDeskGrid(18, 25, 2, 3, 4).slice(0, 6).map(pos => ({ position: pos, zone: 'UX Wing' })),
-        ...createDeskGrid(58, 25, 3, 3, 4).slice(0, 9).map(pos => ({ position: pos, zone: 'Dev Zone' })),
-        ...createDeskIslands(80, 25, 2, 4).slice(0, 8).map(pos => ({ position: pos, zone: 'Dev Zone' })),
-        ...createDeskGrid(30, 70, 1, 4, 5).slice(0, 4).map(pos => ({ position: pos, zone: 'Test rigs' })),
-        { position: { x: 72, y: 80 }, zone: 'Collaboration' },
-        { position: { x: 88, y: 70 }, zone: 'Collaboration' },
-        { position: { x: 92, y: 80 }, zone: 'Collaboration' },
+        { position: { x: 20, y: 35 }, zone: 'UX Wing' },
+        { position: { x: 35, y: 25 }, zone: 'UX Wing' },
+        { position: { x: 40, y: 50 }, zone: 'UX Wing' },
+        { position: { x: 60, y: 20 }, zone: 'Dev Zone' },
+        { position: { x: 80, y: 35 }, zone: 'Dev Zone' },
+        { position: { x: 65, y: 50 }, zone: 'Dev Zone' },
+        { position: { x: 85, y: 45 }, zone: 'Dev Zone' },
+        { position: { x: 25, y: 70 }, zone: 'Test rigs' },
+        { position: { x: 50, y: 75 }, zone: 'Test rigs' },
+        { position: { x: 35, y: 80 }, zone: 'Test rigs' },
+        { position: { x: 75, y: 70 }, zone: 'Collaboration' },
+        { position: { x: 85, y: 80 }, zone: 'Collaboration' },
       ]
     },
     '3rd Floor': {
@@ -125,39 +70,21 @@ const OfficeMap = () => {
         { name: 'Private Meeting', color: 'bg-yellow-100 border-yellow-300', position: { x: 55, y: 60, width: 35, height: 25 } },
       ],
       colleagues: [
-        // Executive offices - individual desks along walls
-        ...createDeskGrid(18, 18, 2, 4, 6).map((pos, i) => ({ 
-          name: `Exec ${i + 1}`, position: pos, zone: 'Executive Offices' 
-        })),
-        // Finance team - linear arrangement
-        ...createDeskGrid(58, 25, 2, 3, 4).map((pos, i) => ({ 
-          name: `Finance ${i + 1}`, position: pos, zone: 'Finance' 
-        })),
-        // HR Department - small clusters
-        ...createDeskIslands(32, 65, 1, 4).map((pos, i) => ({ 
-          name: `HR ${i + 1}`, position: pos, zone: 'HR Department' 
-        })),
-        // Additional HR staff
-        { name: 'HR Director', position: { x: 25, y: 60 }, zone: 'HR Department' },
-        { name: 'Recruiter A', position: { x: 35, y: 75 }, zone: 'HR Department' },
-        { name: 'Recruiter B', position: { x: 40, y: 80 }, zone: 'HR Department' },
-        // Private meeting rooms
-        { name: 'Legal Counsel', position: { x: 60, y: 65 }, zone: 'Private Meeting' },
-        { name: 'Strategy Lead', position: { x: 75, y: 70 }, zone: 'Private Meeting' },
-        { name: 'Board Advisor', position: { x: 85, y: 75 }, zone: 'Private Meeting' },
+        { name: 'David L.', position: { x: 30, y: 30 }, zone: 'Executive Offices' },
+        { name: 'Carol M.', position: { x: 70, y: 35 }, zone: 'Finance' },
+        { name: 'Robert K.', position: { x: 32, y: 70 }, zone: 'HR Department' },
+        { name: 'Diana S.', position: { x: 75, y: 70 }, zone: 'Private Meeting' },
+        { name: 'Mark T.', position: { x: 40, y: 25 }, zone: 'Executive Offices' },
       ],
-      myDesk: { position: { x: 62, y: 29 }, zone: 'Finance' },
+      myDesk: { position: { x: 65, y: 30 }, zone: 'Finance' },
       availableDesks: [
-        // 15 available desks on executive floor
-        ...createDeskGrid(22, 22, 1, 3, 8).map(pos => ({ position: pos, zone: 'Executive Offices' })),
-        { position: { x: 42, y: 30 }, zone: 'Executive Offices' },
-        { position: { x: 45, y: 40 }, zone: 'Executive Offices' },
-        ...createDeskGrid(70, 30, 1, 2, 8).map(pos => ({ position: pos, zone: 'Finance' })),
-        { position: { x: 78, y: 40 }, zone: 'Finance' },
-        ...createDeskGrid(28, 70, 1, 2, 6).map(pos => ({ position: pos, zone: 'HR Department' })),
-        { position: { x: 65, y: 80 }, zone: 'Private Meeting' },
-        { position: { x: 80, y: 82 }, zone: 'Private Meeting' },
-        { position: { x: 90, y: 70 }, zone: 'Private Meeting' },
+        { position: { x: 25, y: 40 }, zone: 'Executive Offices' },
+        { position: { x: 45, y: 35 }, zone: 'Executive Offices' },
+        { position: { x: 60, y: 30 }, zone: 'Finance' },
+        { position: { x: 80, y: 40 }, zone: 'Finance' },
+        { position: { x: 30, y: 60 }, zone: 'HR Department' },
+        { position: { x: 65, y: 75 }, zone: 'Private Meeting' },
+        { position: { x: 80, y: 65 }, zone: 'Private Meeting' },
       ]
     }
   }
@@ -230,7 +157,7 @@ const OfficeMap = () => {
             {currentFloorData.colleagues.map((colleague, index) => (
               <div
                 key={index}
-                className="absolute w-3.5 h-3.5 bg-green-500 border-2 border-green-600 rounded-full transform -translate-x-1/2 -translate-y-1/2 z-10"
+                className="absolute w-3 h-3 bg-green-500 border-2 border-green-600 rounded-full transform -translate-x-1/2 -translate-y-1/2 z-10"
                 style={{
                   left: `${colleague.position.x}%`,
                   top: `${colleague.position.y}%`,
@@ -243,7 +170,7 @@ const OfficeMap = () => {
             {currentFloorData.availableDesks.map((desk, i) => (
               <div
                 key={i}
-                className="absolute w-2.5 h-2.5 bg-gray-300 border border-gray-400 rounded transform -translate-x-1/2 -translate-y-1/2"
+                className="absolute w-2 h-2 bg-gray-300 border border-gray-400 rounded transform -translate-x-1/2 -translate-y-1/2"
                 style={{
                   left: `${desk.position.x}%`,
                   top: `${desk.position.y}%`,
@@ -283,21 +210,12 @@ const OfficeMap = () => {
       {/* Current Floor Stats */}
       <Card>
         <CardContent className="p-4">
-          <div className="space-y-3">
-            <div className="flex justify-between items-center">
-              <div className="flex items-center gap-2">
-                <Users size={20} className="text-gray-600" />
-                <span className="text-sm font-medium">People on this floor</span>
-              </div>
-              <Badge variant="secondary">{currentFloorData.colleagues.length + 1}</Badge>
+          <div className="flex justify-between items-center">
+            <div className="flex items-center gap-2">
+              <Users size={20} className="text-gray-600" />
+              <span className="text-sm font-medium">People on this floor</span>
             </div>
-            <div className="flex justify-between items-center">
-              <div className="flex items-center gap-2">
-                <Calendar size={20} className="text-gray-600" />
-                <span className="text-sm font-medium">Available desks</span>
-              </div>
-              <Badge variant="outline">{currentFloorData.availableDesks.length}</Badge>
-            </div>
+            <Badge variant="secondary">{currentFloorData.colleagues.length + 1}</Badge>
           </div>
         </CardContent>
       </Card>
