@@ -163,7 +163,7 @@ export const teamMembers: TeamData = {
     { name: 'Tyra Lindqvist', status: 'In Office', location: '2nd Floor – Collaboration', avatar: '/placeholder.svg', initials: 'TL2' },
     { name: 'Folke Andersen', status: 'Out Today', location: null, avatar: '/placeholder.svg', initials: 'FA3' },
     { name: 'Tove Sundqvist', status: 'Remote', location: null, avatar: '/placeholder.svg', initials: 'TS' },
-    { name: 'Ivar Lindberg', status: 'In Office', location: '2nd Floor – Collaboration', avatar: '/placeholder.svg', initials: 'IV' },
+    { name: 'Lars-Gunnar Lundgren', status: 'In Office', location: '2nd Floor – Collaboration', avatar: '/placeholder.svg', initials: 'IV' },
     { name: 'Saga Eriksson', status: 'Remote', location: null, avatar: '/placeholder.svg', initials: 'SE' },
     { name: 'Ture Blomqvist', status: 'In Office', location: '2nd Floor – Collaboration', avatar: '/placeholder.svg', initials: 'TB2' },
     { name: 'Smilla Karlsson', status: 'Remote', location: null, avatar: '/placeholder.svg', initials: 'SK' },
