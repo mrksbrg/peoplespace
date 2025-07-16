@@ -92,7 +92,7 @@ const OfficeMap = () => {
         { name: 'Executive Offices', color: 'bg-purple-100 border-purple-300', position: { x: 15, y: 15, width: 35, height: 30 } },
         { name: 'Finance', color: 'bg-blue-100 border-blue-300', position: { x: 55, y: 20, width: 30, height: 25 } },
         { name: 'HR Department', color: 'bg-green-100 border-green-300', position: { x: 20, y: 55, width: 25, height: 30 } },
-        { name: 'Private Meeting', color: 'bg-yellow-100 border-yellow-300', position: { x: 55, y: 60, width: 35, height: 25 } },
+        { name: 'Collaboration', color: 'bg-yellow-100 border-yellow-300', position: { x: 55, y: 60, width: 35, height: 25 } },
       ],
       meetingRooms: [
         { position: { x: 5, y: 20, width: 10, height: 8 } },
@@ -103,7 +103,7 @@ const OfficeMap = () => {
         { name: 'David L.', position: { x: 22, y: 22 }, zone: 'Executive Offices' },
         { name: 'Carol M.', position: { x: 78, y: 28 }, zone: 'Finance' },
         { name: 'Robert K.', position: { x: 25, y: 62 }, zone: 'HR Department' },
-        { name: 'Diana S.', position: { x: 65, y: 65 }, zone: 'Private Meeting' },
+        { name: 'Diana S.', position: { x: 65, y: 65 }, zone: 'Collaboration' },
         { name: 'Mark T.', position: { x: 40, y: 25 }, zone: 'Executive Offices' },
         { name: 'CEO J.', position: { x: 9, y: 24 }, zone: 'Meeting Room' },
         { name: 'VP K.', position: { x: 89, y: 19 }, zone: 'Meeting Room' },
@@ -115,8 +115,8 @@ const OfficeMap = () => {
         { position: { x: 60, y: 30 }, zone: 'Finance' },
         { position: { x: 80, y: 40 }, zone: 'Finance' },
         { position: { x: 30, y: 60 }, zone: 'HR Department' },
-        { position: { x: 65, y: 75 }, zone: 'Private Meeting' },
-        { position: { x: 80, y: 65 }, zone: 'Private Meeting' },
+        { position: { x: 65, y: 75 }, zone: 'Collaboration' },
+        { position: { x: 80, y: 65 }, zone: 'Collaboration' },
       ]
     }
   }
