@@ -225,7 +225,7 @@ const OfficeMap = () => {
         { name: 'Knox S.', position: { x: 10, y: 22 }, zone: 'Meeting Room' },
         { name: 'VP K.', position: { x: 89, y: 19 }, zone: 'Meeting Room' },
       ],
-      myDesk: { position: { x: 65, y: 30 }, zone: 'Finance & Sales' },
+      myDesk: { position: { x: 10, y: 24 }, zone: 'Meeting Room' },
       availableDesks: [
         // Finance & Sales - Available desks organized in islands
         { position: { x: 64, y: 30 }, zone: 'Finance & Sales' }, // Island 1 - remaining spot
