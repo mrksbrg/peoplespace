@@ -6,61 +6,14 @@ import { Card, CardContent } from '@/components/ui/card'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Badge } from '@/components/ui/badge'
+import { teams, getAllColleagues } from '@/data/teamData'
 
 const Colleagues = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [teamFilter, setTeamFilter] = useState('all')
   const [statusFilter, setStatusFilter] = useState('all')
 
-  const colleagues = [
-    {
-      id: 1,
-      name: 'Sarah Johnson',
-      team: 'UX Design',
-      status: 'In Office',
-      location: '2nd Floor – UX Wing',
-      avatar: '/placeholder.svg',
-      initials: 'SJ'
-    },
-    {
-      id: 2,
-      name: 'Mike Chen',
-      team: 'Engineering',
-      status: 'Remote',
-      location: null,
-      avatar: '/placeholder.svg',
-      initials: 'MC'
-    },
-    {
-      id: 3,
-      name: 'Emma Davis',
-      team: 'Quality Assurance',
-      status: 'In Office',
-      location: '2nd Floor – Test rigs',
-      avatar: '/placeholder.svg',
-      initials: 'ED'
-    },
-    {
-      id: 4,
-      name: 'James Wilson',
-      team: 'Engineering',
-      status: 'In Office',
-      location: '2nd Floor – Dev Zone',
-      avatar: '/placeholder.svg',
-      initials: 'JW'
-    },
-    {
-      id: 5,
-      name: 'Lisa Anderson',
-      team: 'Sales',
-      status: 'Out Today',
-      location: null,
-      avatar: '/placeholder.svg',
-      initials: 'LA'
-    }
-  ]
-
-  const teams = ['UX Design', 'Engineering', 'Quality Assurance', 'Sales']
+  const colleagues = getAllColleagues()
 
   const filteredColleagues = colleagues.filter(colleague => {
     const matchesSearch = colleague.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
