@@ -23,7 +23,7 @@ const OfficeMap = () => {
         { position: { x: 90, y: 2, width: 8, height: 10 } },
         { position: { x: 75, y: 10, width: 12, height: 9 } },
         { position: { x: 2, y: 85, width: 14, height: 8 } },
-        { position: { x: 85, y: 2, width: 12, height: 8 } },
+        { position: { x: 2, y: 50, width: 12, height: 8 } },
       ],
       colleagues: [
         { name: 'Lisa R.', position: { x: 18, y: 25 }, zone: 'Reception' },
