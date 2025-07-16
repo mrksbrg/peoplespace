@@ -1,3 +1,4 @@
+
 import { useState } from 'react'
 import { MapPin, Calendar, Users, Map } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -29,7 +30,7 @@ const Dashboard = () => {
       {/* Header */}
       <div className="text-center py-4">
         <h1 className="text-2xl font-bold text-gray-900">PeopleSpace</h1>
-        <p className="text-gray-500">Welcome back, Alex!</p>
+        <p className="text-gray-500">Welcome back, Lars-Gunnar!</p>
       </div>
 
       {/* Status Card */}
