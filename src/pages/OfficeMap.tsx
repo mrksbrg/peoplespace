@@ -213,9 +213,11 @@ const OfficeMap = () => {
         { name: 'Lucas D.', position: { x: 24, y: 78 }, zone: 'HR Department' },
         { name: 'Mia F.', position: { x: 38, y: 82 }, zone: 'HR Department' },
         
-        // Collaboration (2 people)
-        { name: 'Diana S.', position: { x: 65, y: 65 }, zone: 'Collaboration' },
-        { name: 'Willa T.', position: { x: 75, y: 70 }, zone: 'Collaboration' },
+        // Collaboration (2 people) - Organized in desk islands
+        // Island 1 - Left Creative Hub
+        { name: 'Diana S.', position: { x: 58, y: 68 }, zone: 'Collaboration' },
+        // Island 2 - Right Innovation Area  
+        { name: 'Willa T.', position: { x: 82, y: 68 }, zone: 'Collaboration' },
         
         // Meeting Rooms - 3rd Floor Meeting Room 1 (4 people executive meeting)
         { name: 'CEO J.', position: { x: 9, y: 24 }, zone: 'Meeting Room' },
@@ -234,18 +236,25 @@ const OfficeMap = () => {
         { position: { x: 38, y: 58 }, zone: 'HR Department' },
         { position: { x: 42, y: 62 }, zone: 'HR Department' },
         { position: { x: 24, y: 68 }, zone: 'HR Department' },
-        { position: { x: 68, y: 78 }, zone: 'Collaboration' },
-        { position: { x: 82, y: 66 }, zone: 'Collaboration' },
-        { position: { x: 72, y: 72 }, zone: 'Collaboration' },
-        { position: { x: 78, y: 74 }, zone: 'Collaboration' },
-        { position: { x: 84, y: 72 }, zone: 'Collaboration' },
-        { position: { x: 76, y: 68 }, zone: 'Collaboration' },
-        { position: { x: 70, y: 76 }, zone: 'Collaboration' },
-        { position: { x: 86, y: 68 }, zone: 'Collaboration' },
-        { position: { x: 74, y: 82 }, zone: 'Collaboration' },
-        { position: { x: 80, y: 78 }, zone: 'Collaboration' },
-        { position: { x: 68, y: 72 }, zone: 'Collaboration' },
-        { position: { x: 82, y: 82 }, zone: 'Collaboration' },
+        // Collaboration - Available desks organized in islands
+        // Island 1 - Left Creative Hub
+        { position: { x: 58, y: 72 }, zone: 'Collaboration' },
+        { position: { x: 61, y: 68 }, zone: 'Collaboration' },
+        { position: { x: 61, y: 72 }, zone: 'Collaboration' },
+        { position: { x: 58, y: 76 }, zone: 'Collaboration' },
+        { position: { x: 61, y: 76 }, zone: 'Collaboration' },
+        
+        // Island 2 - Right Innovation Area
+        { position: { x: 82, y: 72 }, zone: 'Collaboration' },
+        { position: { x: 85, y: 68 }, zone: 'Collaboration' },
+        { position: { x: 85, y: 72 }, zone: 'Collaboration' },
+        { position: { x: 82, y: 76 }, zone: 'Collaboration' },
+        { position: { x: 85, y: 76 }, zone: 'Collaboration' },
+        
+        // Island 3 - Back Strategy Corner
+        { position: { x: 70, y: 80 }, zone: 'Collaboration' },
+        { position: { x: 73, y: 80 }, zone: 'Collaboration' },
+        { position: { x: 76, y: 80 }, zone: 'Collaboration' },
       ]
     }
   }
