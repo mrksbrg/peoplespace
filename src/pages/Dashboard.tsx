@@ -54,10 +54,14 @@ const Dashboard = () => {
                 {statusOptions.map((option) => (
                   <SelectItem key={option} value={option}>
                     <div className="flex items-center gap-2">
-                      <div className={`w-2 h-2 rounded-full ${
-                        option === 'In Office' ? 'bg-green-500' :
-                        option === 'Remote' ? 'bg-blue-500' : 'bg-gray-500'
-                      }`} />
+                      <div 
+                        className={`w-2 h-2 rounded-full ${
+                          option === 'In Office' ? 'bg-green-500' :
+                          option === 'Remote' ? 'bg-blue-500' : 'bg-gray-500'
+                        }`} 
+                        aria-label={`Status indicator: ${option}`}
+                        role="img"
+                      />
                       {option}
                     </div>
                   </SelectItem>

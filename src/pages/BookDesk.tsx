@@ -28,10 +28,18 @@ const BookDesk = () => {
     '3rd Floor': ['Sales', 'Quality Assurance', 'Executive Suites']
   }
 
-  const generateDesks = () => {
-    const desks = []
+  type DeskStatus = 'available' | 'booked' | 'unavailable'
+  
+  interface Desk {
+    id: string
+    status: DeskStatus
+    number: number
+  }
+
+  const generateDesks = (): Desk[] => {
+    const desks: Desk[] = []
     for (let i = 1; i <= 20; i++) {
-      const status = Math.random() > 0.7 ? 'booked' : Math.random() > 0.8 ? 'unavailable' : 'available'
+      const status: DeskStatus = Math.random() > 0.7 ? 'booked' : Math.random() > 0.8 ? 'unavailable' : 'available'
       desks.push({
         id: `${floor?.charAt(0)}${zone?.charAt(0)}-${i.toString().padStart(2, '0')}`,
         status,
@@ -53,7 +61,7 @@ const BookDesk = () => {
     }
   }
 
-  const handleDeskSelect = (desk: any) => {
+  const handleDeskSelect = (desk: Desk) => {
     if (desk.status === 'available') {
       setSelectedDesk(desk.id)
     }

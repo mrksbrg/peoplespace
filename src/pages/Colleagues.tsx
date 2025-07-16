@@ -77,7 +77,7 @@ const Colleagues = () => {
             <CardContent className="p-4">
               <div className="flex items-center space-x-4">
                 <Avatar>
-                  <AvatarImage src={colleague.avatar} />
+                  <AvatarImage src={colleague.avatar} alt={`Profile picture of ${colleague.name}`} />
                   <AvatarFallback>{colleague.initials}</AvatarFallback>
                 </Avatar>
                 
@@ -96,6 +96,7 @@ const Colleagues = () => {
                         colleague.status === 'Remote' ? 'bg-blue-100 text-blue-800' :
                         'bg-gray-100 text-gray-800'
                       }`}
+                      aria-label={`Status: ${colleague.status}`}
                     >
                       {colleague.status}
                     </Badge>
