@@ -35,6 +35,14 @@ const OfficeMap = () => {
       myDesk: { position: { x: 20, y: 25 }, zone: 'Reception' },
       availableDesks: [
         { position: { x: 25, y: 70 }, zone: 'Showroom' },
+        { position: { x: 20, y: 65 }, zone: 'Showroom' },
+        { position: { x: 30, y: 60 }, zone: 'Showroom' },
+        { position: { x: 35, y: 68 }, zone: 'Showroom' },
+        { position: { x: 40, y: 65 }, zone: 'Showroom' },
+        { position: { x: 18, y: 72 }, zone: 'Showroom' },
+        { position: { x: 38, y: 72 }, zone: 'Showroom' },
+        { position: { x: 28, y: 55 }, zone: 'Showroom' },
+        { position: { x: 32, y: 75 }, zone: 'Showroom' },
       ]
     },
     '2nd Floor': {
