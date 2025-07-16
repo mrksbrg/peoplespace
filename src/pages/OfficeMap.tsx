@@ -150,11 +150,14 @@ const OfficeMap = () => {
         { position: { x: 5, y: 80, width: 12, height: 9 } },
       ],
       colleagues: [
-        // Executive Offices (2 people - keep existing)
+        // Executive Offices (5 people)
         { name: 'David L.', position: { x: 22, y: 22 }, zone: 'Executive Offices' },
         { name: 'Mark T.', position: { x: 40, y: 25 }, zone: 'Executive Offices' },
+        { name: 'Sarah C.', position: { x: 30, y: 30 }, zone: 'Executive Offices' },
+        { name: 'James R.', position: { x: 35, y: 35 }, zone: 'Executive Offices' },
+        { name: 'Lisa M.', position: { x: 25, y: 35 }, zone: 'Executive Offices' },
         
-        // Finance & Sales (13 people)
+        // Finance & Sales (12 people)
         { name: 'Carol M.', position: { x: 78, y: 28 }, zone: 'Finance & Sales' },
         { name: 'Ava Q.', position: { x: 60, y: 25 }, zone: 'Finance & Sales' },
         { name: 'Leo H.', position: { x: 70, y: 35 }, zone: 'Finance & Sales' },
@@ -167,13 +170,18 @@ const OfficeMap = () => {
         { name: 'Crew P.', position: { x: 83, y: 25 }, zone: 'Finance & Sales' },
         { name: 'Saya R.', position: { x: 62, y: 40 }, zone: 'Finance & Sales' },
         { name: 'Knox S.', position: { x: 77, y: 40 }, zone: 'Finance & Sales' },
-        { name: 'Willa T.', position: { x: 73, y: 30 }, zone: 'Finance & Sales' },
         
-        // HR Department (1 person - keep existing)
+        // HR Department (6 people)
         { name: 'Robert K.', position: { x: 25, y: 62 }, zone: 'HR Department' },
+        { name: 'Emma H.', position: { x: 35, y: 65 }, zone: 'HR Department' },
+        { name: 'Oliver P.', position: { x: 30, y: 70 }, zone: 'HR Department' },
+        { name: 'Grace W.', position: { x: 40, y: 75 }, zone: 'HR Department' },
+        { name: 'Lucas D.', position: { x: 25, y: 75 }, zone: 'HR Department' },
+        { name: 'Mia F.', position: { x: 35, y: 80 }, zone: 'HR Department' },
         
-        // Collaboration (keep existing)
+        // Collaboration (2 people)
         { name: 'Diana S.', position: { x: 65, y: 65 }, zone: 'Collaboration' },
+        { name: 'Willa T.', position: { x: 75, y: 70 }, zone: 'Collaboration' },
         
         // Meeting Rooms
         { name: 'CEO J.', position: { x: 9, y: 24 }, zone: 'Meeting Room' },
@@ -184,6 +192,13 @@ const OfficeMap = () => {
         { position: { x: 60, y: 30 }, zone: 'Finance & Sales' },
         { position: { x: 80, y: 40 }, zone: 'Finance & Sales' },
         { position: { x: 30, y: 60 }, zone: 'HR Department' },
+        { position: { x: 35, y: 58 }, zone: 'HR Department' },
+        { position: { x: 40, y: 62 }, zone: 'HR Department' },
+        { position: { x: 25, y: 68 }, zone: 'HR Department' },
+        { position: { x: 42, y: 68 }, zone: 'HR Department' },
+        { position: { x: 30, y: 78 }, zone: 'HR Department' },
+        { position: { x: 38, y: 82 }, zone: 'HR Department' },
+        { position: { x: 28, y: 82 }, zone: 'HR Department' },
         { position: { x: 65, y: 75 }, zone: 'Collaboration' },
         { position: { x: 80, y: 65 }, zone: 'Collaboration' },
       ]
