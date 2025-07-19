@@ -1,11 +1,21 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { MapPin, Users, Calendar } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Badge } from '@/components/ui/badge'
 
 const OfficeMap = () => {
+  const [searchParams] = useSearchParams()
+  const floorParam = searchParams.get('floor')
   const [selectedFloor, setSelectedFloor] = useState('2nd Floor')
+
+  // Set initial floor from URL parameter
+  useEffect(() => {
+    if (floorParam && floors.includes(floorParam)) {
+      setSelectedFloor(floorParam)
+    }
+  }, [floorParam])
 
   const floors = ['1st Floor', '2nd Floor', '3rd Floor']
   
@@ -67,85 +77,56 @@ const OfficeMap = () => {
         { position: { x: 85, y: 85, width: 10, height: 8 } },
       ],
       colleagues: [
-        // UX Wing (9 people) - Organized in desk islands
-        // Island 1 - Left Collaborative Hub
         { name: 'Sarah J.', position: { x: 19, y: 28 }, zone: 'UX Wing' },
         { name: 'Maya C.', position: { x: 22, y: 28 }, zone: 'UX Wing' },
         { name: 'Lucas R.', position: { x: 25, y: 28 }, zone: 'UX Wing' },
         { name: 'Zoe K.', position: { x: 19, y: 32 }, zone: 'UX Wing' },
         { name: 'Ryan P.', position: { x: 22, y: 32 }, zone: 'UX Wing' },
-        // Island 2 - Right Focus Area  
         { name: 'Lily M.', position: { x: 36, y: 47 }, zone: 'UX Wing' },
         { name: 'Noah T.', position: { x: 39, y: 47 }, zone: 'UX Wing' },
-        // Island 3 - Senior Corner
         { name: 'Grace H.', position: { x: 39, y: 27 }, zone: 'UX Wing' },
         { name: 'Ethan W.', position: { x: 42, y: 27 }, zone: 'UX Wing' },
-        
-        // Dev Zone (19 people) - Organized in 4 desk islands
-        // Island 1 - Front Left (Team A)
         { name: 'Mike C.', position: { x: 58, y: 20 }, zone: 'Dev Zone' },
         { name: 'James W.', position: { x: 61, y: 20 }, zone: 'Dev Zone' },
         { name: 'Sofia B.', position: { x: 64, y: 20 }, zone: 'Dev Zone' },
         { name: 'Aaron L.', position: { x: 58, y: 24 }, zone: 'Dev Zone' },
         { name: 'Mia G.', position: { x: 61, y: 24 }, zone: 'Dev Zone' },
         { name: 'Owen D.', position: { x: 64, y: 24 }, zone: 'Dev Zone' },
-        
-        // Island 2 - Front Right (Team B) 
         { name: 'Chloe F.', position: { x: 78, y: 20 }, zone: 'Dev Zone' },
         { name: 'Ian S.', position: { x: 81, y: 20 }, zone: 'Dev Zone' },
         { name: 'Hazel N.', position: { x: 84, y: 20 }, zone: 'Dev Zone' },
         { name: 'Blake R.', position: { x: 78, y: 24 }, zone: 'Dev Zone' },
         { name: 'Vera J.', position: { x: 81, y: 24 }, zone: 'Dev Zone' },
-        
-        // Island 3 - Back Left (Team C)
         { name: 'Kai M.', position: { x: 58, y: 44 }, zone: 'Dev Zone' },
         { name: 'Ruby V.', position: { x: 61, y: 44 }, zone: 'Dev Zone' },
         { name: 'Felix Q.', position: { x: 64, y: 44 }, zone: 'Dev Zone' },
         { name: 'Iris C.', position: { x: 58, y: 48 }, zone: 'Dev Zone' },
         { name: 'Jude A.', position: { x: 61, y: 48 }, zone: 'Dev Zone' },
-        
-        // Island 4 - Back Right (Senior Team)
         { name: 'Sage E.', position: { x: 78, y: 44 }, zone: 'Dev Zone' },
         { name: 'Rex O.', position: { x: 81, y: 44 }, zone: 'Dev Zone' },
         { name: 'Ivy T.', position: { x: 84, y: 44 }, zone: 'Dev Zone' },
-        
-        // Test Rigs (9 people) - Organized in 3 desk islands
-        // Island 1 - Left Testing Hub
         { name: 'Emma D.', position: { x: 24, y: 64 }, zone: 'Test Rigs' },
         { name: 'Cole Z.', position: { x: 27, y: 64 }, zone: 'Test Rigs' },
         { name: 'Nora X.', position: { x: 30, y: 64 }, zone: 'Test Rigs' },
         { name: 'Dean Y.', position: { x: 24, y: 68 }, zone: 'Test Rigs' },
-        
-        // Island 2 - Right QA Area
         { name: 'Tess U.', position: { x: 50, y: 64 }, zone: 'Test Rigs' },
         { name: 'Cruz I.', position: { x: 53, y: 64 }, zone: 'Test Rigs' },
         { name: 'Lane K.', position: { x: 56, y: 64 }, zone: 'Test Rigs' },
-        
-        // Island 3 - Back Performance Team
         { name: 'Jade P.', position: { x: 36, y: 78 }, zone: 'Test Rigs' },
         { name: 'Ford L.', position: { x: 39, y: 78 }, zone: 'Test Rigs' },
-        
-        // Collaboration (13 people) - Organized in 3 desk islands
-        // Island 1 - Left Creative Hub
         { name: 'Eve R.', position: { x: 72, y: 68 }, zone: 'Collaboration' },
         { name: 'Clay S.', position: { x: 75, y: 68 }, zone: 'Collaboration' },
         { name: 'Rose T.', position: { x: 78, y: 68 }, zone: 'Collaboration' },
         { name: 'Jack V.', position: { x: 72, y: 72 }, zone: 'Collaboration' },
         { name: 'Skye W.', position: { x: 75, y: 72 }, zone: 'Collaboration' },
-        
-        // Island 2 - Right Innovation Area
         { name: 'Reid X.', position: { x: 88, y: 68 }, zone: 'Collaboration' },
         { name: 'Luna Y.', position: { x: 91, y: 68 }, zone: 'Collaboration' },
         { name: 'Beck Z.', position: { x: 94, y: 68 }, zone: 'Collaboration' },
         { name: 'Wren A.', position: { x: 88, y: 72 }, zone: 'Collaboration' },
         { name: 'Knox B.', position: { x: 91, y: 72 }, zone: 'Collaboration' },
-        
-        // Island 3 - Back Strategy Corner
         { name: 'Faye C.', position: { x: 80, y: 80 }, zone: 'Collaboration' },
         { name: 'Zane D.', position: { x: 83, y: 80 }, zone: 'Collaboration' },
         { name: 'Sage F.', position: { x: 86, y: 80 }, zone: 'Collaboration' },
-        
-        // Meeting Rooms - 2nd Floor Meeting Room 2 (2 people meeting)
         { name: 'Alex B.', position: { x: 9, y: 18 }, zone: 'Meeting Room' },
         { name: 'Crew P.', position: { x: 7, y: 32 }, zone: 'Meeting Room' },
         { name: 'Knox S.', position: { x: 10, y: 34 }, zone: 'Meeting Room' },
@@ -155,22 +136,18 @@ const OfficeMap = () => {
       ],
       myDesk: { position: { x: 30, y: 45 }, zone: 'UX Wing' },
       availableDesks: [
-        // UX Wing - Available desks in organized islands
-        { position: { x: 25, y: 32 }, zone: 'UX Wing' }, // Island 1 - remaining spot
-        { position: { x: 42, y: 47 }, zone: 'UX Wing' }, // Island 2 - remaining spot  
-        { position: { x: 39, y: 30 }, zone: 'UX Wing' }, // Island 3 - remaining spot
-        // Dev Zone - Available desks organized in islands
-        { position: { x: 58, y: 28 }, zone: 'Dev Zone' }, // Island 1 - remaining spot
-        { position: { x: 84, y: 24 }, zone: 'Dev Zone' }, // Island 2 - remaining spot
-        { position: { x: 64, y: 48 }, zone: 'Dev Zone' }, // Island 3 - remaining spot  
-        { position: { x: 78, y: 48 }, zone: 'Dev Zone' }, // Island 4 - remaining spot
-        // Test Rigs - Available desks organized in islands
-        { position: { x: 27, y: 68 }, zone: 'Test Rigs' }, // Island 1 - remaining spot
-        { position: { x: 50, y: 68 }, zone: 'Test Rigs' }, // Island 2 - remaining spot
-        { position: { x: 42, y: 78 }, zone: 'Test Rigs' }, // Island 3 - remaining spot
-        // Collaboration - Available desks organized in islands
-        { position: { x: 78, y: 72 }, zone: 'Collaboration' }, // Island 1 - remaining spot
-        { position: { x: 94, y: 72 }, zone: 'Collaboration' }, // Island 2 - remaining spot
+        { position: { x: 25, y: 32 }, zone: 'UX Wing' },
+        { position: { x: 42, y: 47 }, zone: 'UX Wing' },
+        { position: { x: 39, y: 30 }, zone: 'UX Wing' },
+        { position: { x: 58, y: 28 }, zone: 'Dev Zone' },
+        { position: { x: 84, y: 24 }, zone: 'Dev Zone' },
+        { position: { x: 64, y: 48 }, zone: 'Dev Zone' },
+        { position: { x: 78, y: 48 }, zone: 'Dev Zone' },
+        { position: { x: 27, y: 68 }, zone: 'Test Rigs' },
+        { position: { x: 50, y: 68 }, zone: 'Test Rigs' },
+        { position: { x: 42, y: 78 }, zone: 'Test Rigs' },
+        { position: { x: 78, y: 72 }, zone: 'Collaboration' },
+        { position: { x: 94, y: 72 }, zone: 'Collaboration' },
       ]
     },
     '3rd Floor': {
@@ -186,47 +163,26 @@ const OfficeMap = () => {
         { position: { x: 5, y: 80, width: 12, height: 9 } },
       ],
       colleagues: [
-        // Executive Offices (5 people) - Separated into individual offices
-        // CEO Office (top-left)
         { name: 'David L.', position: { x: 20, y: 20 }, zone: 'Executive Offices' },
-        // CTO Office (top-right) 
         { name: 'Mark T.', position: { x: 45, y: 20 }, zone: 'Executive Offices' },
-        // CFO Office (bottom-left)
         { name: 'Sarah C.', position: { x: 20, y: 40 }, zone: 'Executive Offices' },
-        // COO & VP Meeting (bottom-right - in discussion)
         { name: 'James R.', position: { x: 42, y: 38 }, zone: 'Executive Offices' },
         { name: 'Lisa M.', position: { x: 46, y: 40 }, zone: 'Executive Offices' },
-        
-         // Finance & Sales (8 people) - Organized in 2 desk islands
-        // Island 1 - Front Sales Team
         { name: 'Carol M.', position: { x: 58, y: 26 }, zone: 'Finance & Sales' },
         { name: 'Ava Q.', position: { x: 61, y: 26 }, zone: 'Finance & Sales' },
         { name: 'Leo H.', position: { x: 64, y: 26 }, zone: 'Finance & Sales' },
         { name: 'Finn K.', position: { x: 58, y: 30 }, zone: 'Finance & Sales' },
         { name: 'Bree L.', position: { x: 61, y: 30 }, zone: 'Finance & Sales' },
-        
-        // Island 2 - Back Finance Team
         { name: 'Dove N.', position: { x: 78, y: 38 }, zone: 'Finance & Sales' },
         { name: 'Zara O.', position: { x: 81, y: 38 }, zone: 'Finance & Sales' },
         { name: 'Saya R.', position: { x: 84, y: 38 }, zone: 'Finance & Sales' },
-        
-        // HR Department (5 people) - Organized in 2 desk islands
-        // Island 1 - Left Recruitment Team
         { name: 'Robert K.', position: { x: 24, y: 60 }, zone: 'HR Department' },
         { name: 'Oliver P.', position: { x: 27, y: 60 }, zone: 'HR Department' },
         { name: 'Grace W.', position: { x: 24, y: 64 }, zone: 'HR Department' },
-        
-        // Island 2 - Right Operations Team
         { name: 'Lucas D.', position: { x: 38, y: 78 }, zone: 'HR Department' },
         { name: 'Mia F.', position: { x: 41, y: 78 }, zone: 'HR Department' },
-        
-        // Collaboration (2 people) - Organized in desk islands
-        // Island 1 - Left Creative Hub
         { name: 'Diana S.', position: { x: 58, y: 68 }, zone: 'Collaboration' },
-        // Island 2 - Right Innovation Area  
         { name: 'Willa T.', position: { x: 82, y: 68 }, zone: 'Collaboration' },
-        
-        // Meeting Rooms - 3rd Floor Meeting Room 1 (4 people executive meeting)
         { name: 'CEO J.', position: { x: 9, y: 24 }, zone: 'Meeting Room' },
         { name: 'Mae J.', position: { x: 12, y: 22 }, zone: 'Meeting Room' },
         { name: 'Jett M.', position: { x: 8, y: 26 }, zone: 'Meeting Room' },
@@ -236,30 +192,22 @@ const OfficeMap = () => {
       ],
       myDesk: { position: { x: 10, y: 24 }, zone: 'Meeting Room' },
       availableDesks: [
-        // Finance & Sales - Available desks organized in islands
-        { position: { x: 64, y: 30 }, zone: 'Finance & Sales' }, // Island 1 - remaining spot
-        { position: { x: 78, y: 42 }, zone: 'Finance & Sales' }, // Island 2 - remaining spot
-        // HR Department - Available desks organized in islands
-        { position: { x: 27, y: 64 }, zone: 'HR Department' }, // Island 1 - remaining spot
-        { position: { x: 30, y: 60 }, zone: 'HR Department' }, // Island 1 - remaining spot
-        { position: { x: 38, y: 82 }, zone: 'HR Department' }, // Island 2 - remaining spot
-        { position: { x: 41, y: 82 }, zone: 'HR Department' }, // Island 2 - remaining spot
-        // Collaboration - Available desks organized in islands
-        // Island 1 - Left Creative Hub
+        { position: { x: 64, y: 30 }, zone: 'Finance & Sales' },
+        { position: { x: 78, y: 42 }, zone: 'Finance & Sales' },
+        { position: { x: 27, y: 64 }, zone: 'HR Department' },
+        { position: { x: 30, y: 60 }, zone: 'HR Department' },
+        { position: { x: 38, y: 82 }, zone: 'HR Department' },
+        { position: { x: 41, y: 82 }, zone: 'HR Department' },
         { position: { x: 58, y: 72 }, zone: 'Collaboration' },
         { position: { x: 61, y: 68 }, zone: 'Collaboration' },
         { position: { x: 61, y: 72 }, zone: 'Collaboration' },
         { position: { x: 58, y: 76 }, zone: 'Collaboration' },
         { position: { x: 61, y: 76 }, zone: 'Collaboration' },
-        
-        // Island 2 - Right Innovation Area
         { position: { x: 82, y: 72 }, zone: 'Collaboration' },
         { position: { x: 85, y: 68 }, zone: 'Collaboration' },
         { position: { x: 85, y: 72 }, zone: 'Collaboration' },
         { position: { x: 82, y: 76 }, zone: 'Collaboration' },
         { position: { x: 85, y: 76 }, zone: 'Collaboration' },
-        
-        // Island 3 - Back Strategy Corner
         { position: { x: 70, y: 80 }, zone: 'Collaboration' },
         { position: { x: 73, y: 80 }, zone: 'Collaboration' },
         { position: { x: 76, y: 80 }, zone: 'Collaboration' },

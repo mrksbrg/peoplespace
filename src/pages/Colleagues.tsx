@@ -1,4 +1,6 @@
+
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Search, Filter, MapPin, MessageCircle } from 'lucide-react'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
@@ -7,6 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Badge } from '@/components/ui/badge'
 import { teams, getAllColleagues } from '@/data/teamData'
+import { extractFloor } from '@/utils/floorUtils'
 
 const Colleagues = () => {
   const [searchQuery, setSearchQuery] = useState('')
@@ -112,10 +115,13 @@ const Colleagues = () => {
                 
                 <div className="flex flex-col gap-2">
                   {colleague.status === 'In Office' && (
-                    <Button size="sm" variant="outline" className="text-xs">
-                      <MapPin size={14} className="mr-1" />
+                    <Link
+                      to={`/map?floor=${encodeURIComponent(extractFloor(colleague.location || ''))}`}
+                      className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-3 text-xs"
+                    >
+                      <MapPin size={14} />
                       Map
-                    </Button>
+                    </Link>
                   )}
                   <Button size="sm" variant="outline" className="text-xs">
                     <MessageCircle size={14} className="mr-1" />
