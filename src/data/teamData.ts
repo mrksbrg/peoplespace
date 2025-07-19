@@ -16,7 +16,7 @@ export const teamMembers: TeamData = {
   'UX Design': [
     // Swedish names
     { name: 'Erik Andersson', status: 'In Office', location: '2nd Floor – UX Wing', avatar: '/avatars/avatar-001.jpg', initials: 'EA' },
-    { name: 'Anna Lindberg', status: 'Remote', location: null, avatar: '/avatars/avatar-002.jpg', initials: 'AL' },
+    { name: 'Anders Lindberg', status: 'Remote', location: null, avatar: '/avatars/avatar-002.jpg', initials: 'AL' },
     { name: 'Oskar Nilsson', status: 'In Office', location: '2nd Floor – UX Wing', avatar: '/avatars/avatar-003.jpg', initials: 'ON' },
     { name: 'Sara Johansson', status: 'Remote', location: null, avatar: '/avatars/avatar-004.jpg', initials: 'SJ' },
     { name: 'Gustaf Larsson', status: 'Out Today', location: null, avatar: '/avatars/avatar-005.jpg', initials: 'GL' },
